@@ -3,7 +3,6 @@ import {
   Box,
   Button,
   Toolbar,
-  Typography,
   styled,
 } from "@mui/material";
 import TriacomLogo from "./images/triacom-logo.jpg";
