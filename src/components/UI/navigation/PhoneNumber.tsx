@@ -1,5 +1,4 @@
 import { Link, styled, Typography } from "@mui/material";
-import React from "react";
 
 type Props = { description: string; children: string };
 

@@ -19,11 +19,6 @@ const StyledButton = styled(Button)({
   fontSize: 10,
 });
 
-const StyledText = styled(Typography)({
-  color: "#424242",
-  fontSize: 10,
-});
-
 
 const Navbar = () => {
   return (
