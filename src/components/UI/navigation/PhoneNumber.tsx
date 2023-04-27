@@ -8,7 +8,7 @@ type Props = { description: string; children: string };
 const PhoneNumber = (props: Props) => {
   const StyledText = styled(Typography)({
     color: "#424242",
-    fontSize: 10,
+    fontSize: 14,
   });
 
   return (

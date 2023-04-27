@@ -15,7 +15,7 @@ const StyledToolbar = styled(Toolbar)({
 
 const StyledButton = styled(Button)({
   color: "#424242",
-  fontSize: 10,
+  fontSize: 14,
 });
 
 
@@ -23,13 +23,15 @@ const Navbar = () => {
   return (
     <AppBar sx={{ backgroundColor: "white" }} position="sticky">
       <StyledToolbar>
-        <Box sx={{ display: "flex", flexDirection: "row" }}>
-          <img src={TriacomLogo} height={50} alt="" />
-          <StyledButton>Послуги</StyledButton>
-          <StyledButton>Про Компанію</StyledButton>
-          <StyledButton>Часті питання</StyledButton>
-          <StyledButton>Абонентам</StyledButton>
-          <StyledButton>Контакти</StyledButton>
+        <Box sx={{ display: "flex", flexDirection: "row"}}>
+          <img src={TriacomLogo} height={80} alt="" />
+          <Box sx={{mt: 5}}>
+            <StyledButton>Послуги</StyledButton>
+            <StyledButton>Про Компанію</StyledButton>
+            <StyledButton>Часті питання</StyledButton>
+            <StyledButton>Абонентам</StyledButton>
+            <StyledButton>Контакти</StyledButton>
+          </Box>
         </Box>
         <Box sx={{ display: "flex", flexDirection: "row" }}>
           {/* <StyledText>Технічна підтримка: &nbsp;</StyledText>
