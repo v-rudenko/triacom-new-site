@@ -1,13 +1,15 @@
 
-// .banner {
-//   // transform: scale(-1, 1)
-// }
+.banner {
+  position: fixed;
+  transform: scale(-1, 1);
+  // max-height: 100vh;
+  // top: 2000;
+  // width: 100vw;
+  opacity: 0.6;
+}
 .banner_div {
-  // background-image: url("./banner/banner.jpg");
-  // background-size: cover;
-  // transform: scale(-1, 1);
-  // border-radius: 30px;
-  // width: 700px;
+  // background-color: #F7FBFC;
+  // background-color: ;
   // height: 500px;
-  // opacity: 0.85;
+  width: 100vw;
 }

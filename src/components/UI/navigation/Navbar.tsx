@@ -2,6 +2,8 @@ import { AppBar, Box, Button, Toolbar, styled } from "@mui/material";
 import TriacomLogo from "./images/triacom-logo.jpg";
 import PhoneNumber from "./PhoneNumber";
 
+import classes from "./Navbar.module.scss"
+
 const StyledToolbar = styled(Toolbar) (({ theme }) => ({
   display: "flex",
   justifyContent: "space-around",
@@ -17,10 +19,10 @@ const StyledButton = styled(Button)({
 
 const Navbar = () => {
   return (
-    <AppBar sx={{ backgroundColor: "white" }} position="sticky">
+    <AppBar sx={{ backgroundColor: "white"}} position="sticky">
       <StyledToolbar>
         <Box sx={{ display: "flex", flexDirection: "row" }}>
-          <img src={TriacomLogo} height={80} alt="" />
+          <img className={classes.logo} src={TriacomLogo} height={80} alt="" />
           <Box sx={{ mt: 5 }}>
             <StyledButton>Послуги</StyledButton>
             <StyledButton>Про Компанію</StyledButton>
