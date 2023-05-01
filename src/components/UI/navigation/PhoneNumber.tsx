@@ -17,7 +17,7 @@ const PhoneNumber = (props: Props) => {
         <Link underline="none" href={`tel:${props.children}`}>
           {props.children}
         </Link>{" "}
-        &nbsp;
+        &nbsp;&nbsp;&nbsp;
       </StyledText>
     </>
   );
