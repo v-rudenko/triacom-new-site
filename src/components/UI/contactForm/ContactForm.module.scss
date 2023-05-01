@@ -1,15 +1,28 @@
-
-.banner {
+.background {
   position: fixed;
   transform: scale(-1, 1);
-  // max-height: 100vh;
-  // top: 2000;
-  // width: 100vw;
-  opacity: 0.6;
-}
-.banner_div {
-  // background-color: #F7FBFC;
-  // background-color: ;
-  // height: 500px;
   width: 100vw;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.form_div {
+  display: flex;
+  flex: 2;
+  z-index: 2;
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  // background: transparent;
+}
+
+.intro_div {
+  flex: 4;
+}
+
+.banner_div {
+  background-color: rgba(250, 128, 114, 0.199);
+  // width: 60rem;
+  // height: 200px;
+  z-index: 2;
+  flex: 3;
 }
