@@ -15,9 +15,9 @@ const PhoneNumber = (props: Props) => {
       </StyledText>
       <StyledText sx={{ fontWeight: 700, color: "#08212b" }}>
         <Link underline="none" href={`tel:${props.children}`}>
-          {props.children}
+          {props.children}&nbsp;
         </Link>{" "}
-        &nbsp;&nbsp;&nbsp;
+        &nbsp;
       </StyledText>
     </>
   );

@@ -2,14 +2,14 @@ import { AppBar, Box, Button, Toolbar, styled } from "@mui/material";
 import TriacomLogo from "./images/triacom-logo.jpg";
 import PhoneNumber from "./PhoneNumber";
 
-import classes from "./Navbar.module.scss"
+import classes from "./Navbar.module.scss";
 
-const StyledToolbar = styled(Toolbar) (({ theme }) => ({
+const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-around",
-  [theme.breakpoints.down('xl')]: {
-    justifyContent: "space-between"
-  }
+  [theme.breakpoints.down("xl")]: {
+    justifyContent: "space-between",
+  },
 }));
 
 const StyledButton = styled(Button)({
@@ -19,7 +19,7 @@ const StyledButton = styled(Button)({
 
 const Navbar = () => {
   return (
-    <AppBar sx={{ backgroundColor: "white"}} position="sticky">
+    <AppBar sx={{ backgroundColor: "white" }} position="sticky">
       <StyledToolbar>
         <Box sx={{ display: "flex", flexDirection: "row" }}>
           <img className={classes.logo} src={TriacomLogo} height={80} alt="" />
@@ -36,11 +36,11 @@ const Navbar = () => {
           <StyledText sx={{fontWeight: 700, color: "#08212b"}}>044-591-0-591 &nbsp;</StyledText>
           <StyledText>Замовити послугу: &nbsp;</StyledText>
           <StyledText sx={{fontWeight: 700, color: "#08212b"}}>044-591-11-44</StyledText> */}
-          <PhoneNumber description="Технічна підтримка">
-            (044) 591-0-591
-          </PhoneNumber>
           <PhoneNumber description="Замовити послугу">
             (044) 591-11-44
+          </PhoneNumber>
+          <PhoneNumber description="Технічна підтримка">
+            (044) 591-0-591
           </PhoneNumber>
         </Box>
       </StyledToolbar>

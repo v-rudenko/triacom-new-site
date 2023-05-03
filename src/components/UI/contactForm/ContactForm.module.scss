@@ -4,13 +4,14 @@
   width: 100vw;
   opacity: 0.6;
   position: fixed;
-  top: 100px;
+  top: 0;
   z-index: 1;
 }
 .form_div {
   display: flex;
   flex: 2;
   z-index: 2;
+  background-color: white;
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   // background: transparent;
 }
@@ -20,7 +21,9 @@
 }
 
 .banner_div {
-  background-color: rgba(250, 128, 114, 0.199);
+  // background-color: rgba(250, 128, 114, 0.199);
+  border: 3px solid salmon;
+  text-align: center;
   // width: 60rem;
   // height: 200px;
   z-index: 2;
