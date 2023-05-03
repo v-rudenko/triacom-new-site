@@ -1,0 +1,17 @@
+.slider {
+  // width: 400px;
+  // height: 400px;
+  z-index: 2;
+  padding: 0 100px;
+  background: rgba(169, 169, 169, 0.432);
+  margin-top: 50px;
+}
+
+.slide {
+  max-width: 25vw;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
