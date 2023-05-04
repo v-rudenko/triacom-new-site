@@ -3,7 +3,6 @@ import Banner from "./banner/banner3.avif";
 import classes from "./ContactForm.module.scss";
 import GirlBanner from "./banner/GirlBanner";
 import Slider from "./slider/Slider";
-import zIndex from "@mui/material/styles/zIndex";
 // type Props = {}
 
 const FormContainer = styled(Box)({
@@ -74,7 +73,6 @@ const ContactForm = () => {
         </div>
       </FormWrapper>
       <div className={classes.carusel_div}>
-        <h1>Нам довіряють</h1>
         <Slider></Slider>
       </div>
 

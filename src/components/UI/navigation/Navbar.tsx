@@ -1,5 +1,6 @@
 import { AppBar, Box, Button, Toolbar, styled } from "@mui/material";
 import TriacomLogo from "./images/triacom-logo.jpg";
+// import TriacomLogo from "./images/triangulum-logo.png";
 import PhoneNumber from "./PhoneNumber";
 
 import classes from "./Navbar.module.scss";

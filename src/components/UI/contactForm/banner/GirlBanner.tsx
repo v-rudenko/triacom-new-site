@@ -1,4 +1,4 @@
-import girlBanner from "./girl-banner.jpg";
+// import girlBanner from "./girl-banner.jpg";
 
 import classes from "./Banner.module.scss";
 
