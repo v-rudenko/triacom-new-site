@@ -1,4 +1,4 @@
-import { Box, styled } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/Language";
 
 // type Props = {}
@@ -19,6 +19,9 @@ const SolutionBox = styled(Box) ({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
+  backgroundColor: "#D6E6F2",
+  padding: "50px 100px 100px",
+  borderRadius: "15px"
 })
 
 const Solution = () => {
@@ -27,7 +30,8 @@ const Solution = () => {
       <IconBox>
         <LanguageIcon />
       </IconBox>
-      <h4>Інтернет</h4>
+      <Typography variant="h5">Інтернет</Typography>
+      <Typography>Просто якийсь дуже довгий опис</Typography>
     </SolutionBox>
   );
 };

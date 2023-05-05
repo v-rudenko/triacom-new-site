@@ -3,21 +3,40 @@
 import { Box, styled } from "@mui/material";
 import Solution from "./Solution";
 
+const BoxWraper = styled(Box) ({
+  margin: "50px 200px",
+  textAlign: "center"
+})
+
 const StyledBox = styled(Box)({
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   alignItems: "center",
-  margin: "50px 200px"
+  justifyContent: "space-evenly",
+  flexWrap: "wrap",
+  gap: 30,
+  // padding: "50px 200px",
+  // padding: "50px 15%",
 });
 
 const SolutionsList = () => {
   return (
-    <StyledBox>
+    <BoxWraper>
       <div>
         <h1>Наші Послуги</h1>
-        <Solution />
       </div>
-    </StyledBox>
+      <StyledBox>
+        <Solution />
+        <Solution />
+        <Solution />
+        <Solution />
+        <Solution />
+        <Solution />
+        <Solution />
+        <Solution />
+        <Solution />
+      </StyledBox>
+    </BoxWraper>
   );
 };
 

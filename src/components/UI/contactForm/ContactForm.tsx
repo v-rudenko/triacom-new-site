@@ -3,6 +3,8 @@ import Banner from "./banner/banner3.avif";
 import classes from "./ContactForm.module.scss";
 import GirlBanner from "./banner/GirlBanner";
 import Slider from "./slider/Slider";
+
+import PersonIcon from '@mui/icons-material/Person';
 // type Props = {}
 
 const FormContainer = styled(Box)({
@@ -36,12 +38,12 @@ const ContactForm = () => {
                 Заповніть форму і ми знайдемо оптимальне рішення для вашого
                 бізнесу
               </h3>
-              <TextField
-                type="text"
-                id="filled-name-input"
-                label="Ім'я"
-                variant="filled"
-              />
+                <TextField
+                  type="text"
+                  id="filled-name-input"
+                  label="Ім'я"
+                  variant="filled"
+                />
               <TextField
                 type="text"
                 id="filled-name-company"
