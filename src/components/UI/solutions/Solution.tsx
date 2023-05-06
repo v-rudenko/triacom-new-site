@@ -1,7 +1,13 @@
-import { Box, styled, Typography } from "@mui/material";
-import LanguageIcon from "@mui/icons-material/Language";
+import { Height, Margin } from "@mui/icons-material";
+import { Box, Button, styled, Typography } from "@mui/material";
+import React from "react";
 
-// type Props = {}
+type Props = {
+  title: string,
+  description: string,
+  color: string,
+  children: JSX.Element
+}
 
 const IconBox = styled(Box)({
   background: "red",
@@ -20,18 +26,22 @@ const SolutionBox = styled(Box) ({
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: "#D6E6F2",
-  padding: "50px 100px 100px",
-  borderRadius: "15px"
+  // padding: "50px 100px 100px",
+  borderRadius: "15px",
+  // width: "15%",
+  height: "300px",
+  flexBasis: "calc(33.333333% - 30px)",
 })
 
-const Solution = () => {
+const Solution = (props: Props) => {
   return (
     <SolutionBox>
       <IconBox>
-        <LanguageIcon />
+        {props.children}
       </IconBox>
-      <Typography variant="h5">Інтернет</Typography>
-      <Typography>Просто якийсь дуже довгий опис</Typography>
+      <Typography variant="h5">{props.title}</Typography>
+      <Typography>{props.description}</Typography>
+      <Button variant="outlined">Переглянути тарифи</Button>
     </SolutionBox>
   );
 };

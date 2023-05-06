@@ -13,10 +13,13 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   },
 }));
 
-const StyledButton = styled(Button)({
+const StyledButton = styled(Button)(({ theme }) => ({
   color: "#424242",
   fontSize: 14,
-});
+  [theme.breakpoints.down("xl")]: {
+    fontSize: 12
+  },
+}));
 
 const Navbar = () => {
   return (
@@ -32,7 +35,7 @@ const Navbar = () => {
             <StyledButton>Контакти</StyledButton>
           </Box>
         </Box>
-        <Box sx={{ display: { xs: "none", xl: "flex" }, flexDirection: "row" }}>
+        <Box sx={{ display: { xs: "none", lg: "flex" }, flexDirection: "row" }}>
           {/* <StyledText>Технічна підтримка: &nbsp;</StyledText>
           <StyledText sx={{fontWeight: 700, color: "#08212b"}}>044-591-0-591 &nbsp;</StyledText>
           <StyledText>Замовити послугу: &nbsp;</StyledText>

@@ -3,10 +3,13 @@ import { Link, styled, Typography } from "@mui/material";
 type Props = { description: string; children: string };
 
 const PhoneNumber = (props: Props) => {
-  const StyledText = styled(Typography)({
+  const StyledText = styled(Typography)(({ theme }) => ({
     color: "#424242",
     fontSize: 14,
-  });
+    [theme.breakpoints.down("xl")]: {
+      fontSize: 12
+    },
+  }));
 
   return (
     <>

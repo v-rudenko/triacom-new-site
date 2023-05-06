@@ -2,11 +2,12 @@
 
 import { Box, styled } from "@mui/material";
 import Solution from "./Solution";
+import LanguageIcon from "@mui/icons-material/Language";
 
-const BoxWraper = styled(Box) ({
+const BoxWraper = styled(Box)({
   margin: "50px 200px",
-  textAlign: "center"
-})
+  textAlign: "center",
+});
 
 const StyledBox = styled(Box)({
   display: "flex",
@@ -26,15 +27,17 @@ const SolutionsList = () => {
         <h1>Наші Послуги</h1>
       </div>
       <StyledBox>
-        <Solution />
-        <Solution />
-        <Solution />
-        <Solution />
-        <Solution />
-        <Solution />
-        <Solution />
-        <Solution />
-        <Solution />
+        <Solution title="Інтернет" description="Швидкісний Інтернет до 10 Гбіт/с">
+          <LanguageIcon fontSize="large"/>
+        </Solution>
+        <Solution title="Телефонія" description="Якісна телефонія на базі SIP та PRI"></Solution>
+        <Solution></Solution>
+        <Solution></Solution>
+        <Solution></Solution>
+        <Solution></Solution>
+        <Solution></Solution>
+        <Solution></Solution>
+        <Solution></Solution>
       </StyledBox>
     </BoxWraper>
   );
