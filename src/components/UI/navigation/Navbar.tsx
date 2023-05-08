@@ -10,6 +10,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   justifyContent: "space-around",
   [theme.breakpoints.down("xl")]: {
     justifyContent: "space-between",
+    height: "100px",
   },
 }));
 
