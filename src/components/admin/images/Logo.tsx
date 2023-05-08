@@ -1,4 +1,3 @@
-import React from "react";
 import Icon from "./Triacom_Logo.jpg";
 
 type Props = {

@@ -1,6 +1,4 @@
-import { Height, Margin } from "@mui/icons-material";
 import { Box, Button, styled, Typography } from "@mui/material";
-import React from "react";
 
 type Props = {
   title: string;
