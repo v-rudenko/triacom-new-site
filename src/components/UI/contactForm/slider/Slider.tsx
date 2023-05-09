@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
+import "swiper/scss/navigation";
 // import "swiper/css/navigation";
 
 import classes from "./Slider.module.scss";
-import { Autoplay } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 
 import BoryspilLogo from "./icons/Boryspil_logo.svg";
 import ZhulianyLogo from "./icons/Zhuliany_Logo.jpg";
@@ -22,14 +23,17 @@ const Slider = () => {
     <>
       <h1 className={classes.heading_text}>Нам довіряють</h1>
       <Swiper
-        modules={[Autoplay]}
+        draggable={false}
+        navigation={true}
+        modules={[Autoplay, Navigation]}
+        allowTouchMove={false}
         loop={true}
         spaceBetween={200}
         slidesPerView={4}
         onSlideChange={() => console.log("slide changed")}
         autoplay={{
           delay: 3000,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         onSwiper={(swiper) => {
           console.log(swiper);
@@ -37,28 +41,28 @@ const Slider = () => {
         className={classes.slider}
       >
         <SwiperSlide className={classes.slide}>
-          <img height={50} src={BoryspilLogo} />
+          <img draggable={false} height={50} src={BoryspilLogo} />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img height={100} width={100} src={ZhulianyLogo} />
+          <img draggable={false} height={100} width={100} src={ZhulianyLogo} />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img src={DreamLogo} height={100} alt="" />
+          <img draggable={false} src={DreamLogo} height={100} alt="" />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img src={AvellumLogo} height={190} width={200} alt="" />
+          <img draggable={false} src={AvellumLogo} height={190} width={200} alt="" />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img src={HelenLogo} height={100} width={250} alt="" />
+          <img draggable={false} src={HelenLogo} height={100} width={250} alt="" />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img src={KonicaLogo} height={100} alt="" />
+          <img draggable={false} src={KonicaLogo} height={100} alt="" />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img src={LuxopticaLogo} height={100} alt="" />
+          <img draggable={false} src={LuxopticaLogo} height={100} alt="" />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img src={VidiLogo} height={100} alt="" />
+          <img draggable={false} src={VidiLogo} height={100} alt="" />
         </SwiperSlide>
       </Swiper>
     </>

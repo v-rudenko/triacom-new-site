@@ -69,7 +69,7 @@ export default function SignIn() {
                 id="username"
                 label="Ім'я користувача"
                 name="username"
-                autoComplete="username"
+                autoComplete="off"
                 autoFocus
               />
               <TextField

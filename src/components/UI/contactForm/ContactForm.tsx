@@ -4,6 +4,8 @@ import classes from "./ContactForm.module.scss";
 import GirlBanner from "./banner/GirlBanner";
 import Slider from "./slider/Slider";
 
+import PersonIcon from '@mui/icons-material/Person';
+
 // type Props = {}
 
 const FormContainer = styled(Box)({
@@ -39,13 +41,13 @@ const ContactForm = () => {
                 Ми відшукаємо оптимальне рішення для вашого
                 бізнесу
               </Typography>
-                <TextField
-                  type="text"
-                  id="filled-name-input"
-                  label="Ім'я"
-                  variant="filled"
-                  size="small"
-                />
+                  <TextField
+                    type="text"
+                    id="filled-name-input"
+                    label="Ім'я"
+                    variant="filled"
+                    size="small"
+                  />
               <TextField
                 type="text"
                 id="filled-name-company"

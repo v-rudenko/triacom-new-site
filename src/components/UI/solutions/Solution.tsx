@@ -34,7 +34,7 @@ const Solution = (props: Props) => {
   });
   return (
     <SolutionBox>
-      <Box>
+      <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <IconBox>{props.children}</IconBox>
         <Typography variant="h6">{props.title}</Typography>
       </Box>

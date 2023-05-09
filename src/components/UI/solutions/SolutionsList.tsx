@@ -6,6 +6,11 @@ import Solution from "./Solution";
 import LanguageIcon from "@mui/icons-material/Language";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import StorageIcon from "@mui/icons-material/Storage";
+import AccountTreeIcon from "@mui/icons-material/AccountTreeOutlined";
+import CloudOutlinedIcon from "@mui/icons-material/CloudOutlined";
+import FaxIcon from "@mui/icons-material/FaxOutlined";
+import WebOutlinedIcon from "@mui/icons-material/WebOutlined";
+
 
 const BoxWraper = styled(Box)(({ theme }) => ({
   margin: "50px 200px",
@@ -51,16 +56,44 @@ const SolutionsList = () => {
         <Solution
           title="Колокейшн"
           description="Розміщення серверів в нашому дата центрі"
-          color="#ff0000d1"
+          // color="#ff0000d1"
+          color="rgb(255 0 0 / 64%)"
         >
           <StorageIcon sx={{ fontSize }} />
         </Solution>
-        <Solution></Solution>
-        <Solution></Solution>
-        <Solution></Solution>
-        <Solution></Solution>
-        <Solution></Solution>
-        <Solution></Solution>
+        <Solution
+          title="Канали зв'язку"
+          description="Поєднайте свій офіс, філію, склад в єдину систему "
+          color="#007eff"
+        >
+          <AccountTreeIcon sx={{ fontSize }}></AccountTreeIcon>
+        </Solution>
+        <Solution
+          title="Віртуальна АТС"
+          description="Комплексне рішення питання телефонії"
+          color="#00bf00b5"
+        >
+          <Box sx={{ position: "relative" }}>
+            <CloudOutlinedIcon
+              sx={{ fontSize: "46px", position: "relative" }}
+            ></CloudOutlinedIcon>
+            <FaxIcon
+              sx={{
+                position: "absolute",
+                left: "10px",
+                bottom: "14px",
+                fontSize: "24px",
+              }}
+            ></FaxIcon>
+          </Box>
+        </Solution>
+        <Solution
+          title="Хостинг"
+          description="Доступний та зручний хостинг сайтів"
+          color="rgb(255 0 0 / 64%)"
+        >
+          <WebOutlinedIcon sx={{ fontSize }} />
+        </Solution>
       </StyledBox>
     </BoxWraper>
   );
