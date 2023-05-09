@@ -1,10 +1,10 @@
 
 // type Props = {}
 
-const Faq = () => {
+const Questions = () => {
   return (
     <div>Часті питання</div>
   )
 }
 
-export default Faq
+export default Questions

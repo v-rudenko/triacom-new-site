@@ -4,6 +4,9 @@ import TriacomLogo from "./images/triacom-logo.jpg";
 import PhoneNumber from "./PhoneNumber";
 
 import classes from "./Navbar.module.scss";
+import { Link } from "react-router-dom";
+
+const URL = "/triacom-new-site";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
@@ -24,16 +27,16 @@ const StyledButton = styled(Button)(({ theme }) => ({
 
 const Navbar = () => {
   return (
-    <AppBar sx={{ backgroundColor: "white" }} position="sticky">
-      <StyledToolbar>
+    <AppBar draggable={false} sx={{ backgroundColor: "white" }} position="sticky">
+      <StyledToolbar draggable={false}>
         <Box sx={{ display: "flex", flexDirection: "row" }}>
-          <img className={classes.logo} src={TriacomLogo} height={80} alt="" />
+          <Link to={`${URL}`}><img draggable={false} className={classes.logo} src={TriacomLogo} height={80} alt="" /></Link>
           <Box sx={{ mt: 5 }}>
             <StyledButton>Послуги</StyledButton>
-            <StyledButton>Про Компанію</StyledButton>
-            <StyledButton>Часті питання</StyledButton>
+            <Link draggable={false} to={`${URL}/about-company`}><StyledButton>Про Компанію</StyledButton></Link>
+            <Link to={`${URL}/questions`}><StyledButton>Часті питання</StyledButton></Link>
             <StyledButton>Абонентам</StyledButton>
-            <StyledButton>Контакти</StyledButton>
+            <Link to={`${URL}/contacts`}><StyledButton>Контакти</StyledButton></Link>
           </Box>
         </Box>
         <Box sx={{ display: { xs: "none", lg: "flex" }, flexDirection: "row" }}>
