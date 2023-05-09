@@ -4,7 +4,6 @@ import classes from "./ContactForm.module.scss";
 import GirlBanner from "./banner/GirlBanner";
 import Slider from "./slider/Slider";
 
-import PersonIcon from '@mui/icons-material/Person';
 
 // type Props = {}
 

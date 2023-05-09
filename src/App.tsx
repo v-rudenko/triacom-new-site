@@ -1,8 +1,6 @@
 // import { useState } from 'react'
 import "./App.scss";
-import ContactForm from "./components/UI/contactForm/ContactForm";
 import Navbar from "./components/UI/navigation/Navbar";
-import SolutionsList from "./components/UI/solutions/SolutionsList";
 
 import { Routes, Route } from "react-router-dom";
 import AboutCompany from "./components/pages/about_company/AboutCompany";
