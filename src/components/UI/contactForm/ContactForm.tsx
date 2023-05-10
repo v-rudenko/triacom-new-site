@@ -16,7 +16,7 @@ const FormContainer = styled(Box)({
   background: "linear-gradient(to bottom, #1c92d26b, #1c92d270)",
   padding: "1rem 2rem 1.5rem",
   borderRadius: "15px",
-  maxWidth: "450px",
+  maxWidth: "400px",
     // gap: 20,
   gap: 15,
 });
