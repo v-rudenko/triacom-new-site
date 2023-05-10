@@ -4,6 +4,8 @@ import classes from "./ContactForm.module.scss";
 import GirlBanner from "./banner/GirlBanner";
 import Slider from "./slider/Slider";
 
+// import FiraSans from 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap';
+
 
 // type Props = {}
 
@@ -22,7 +24,8 @@ const FormContainer = styled(Box)({
 const FormWrapper = styled(Box)({
   display: "flex",
   flexDirection: "row",
-  padding: "0 150px",
+  justifyContent: "center",
+  padding: "0 80px",
   gap: 20,
   zIndex: 2,
 });
@@ -34,9 +37,9 @@ const ContactForm = () => {
         {/* <div className={classes.banner_div}><h3>Тут буде рекламна картинка та текст</h3></div> */}
         <GirlBanner />
         <div className={classes.form_div}>
-          <form className={classes.form_div}>
+          <form>
             <FormContainer>
-              <Typography variant="h6">
+              <Typography sx={{ fontFamily: 'Fira Sans'}} variant="h6">
                 Ми відшукаємо оптимальне рішення для вашого
                 бізнесу
               </Typography>
