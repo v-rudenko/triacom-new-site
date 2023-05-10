@@ -1,6 +1,7 @@
 import { Box, Typography, styled } from "@mui/material";
 import classes from "./Contacts.module.scss";
 import ContactList from "./ContactList";
+import Map from "./Map";
 // import Map from "./Map";
 // type Props = {}
 
@@ -18,9 +19,9 @@ const Contacts = () => {
 
   return (
     <>
-      <div>123</div>
       <CentringBox>
         <ContactList />
+        <Map></Map>
       </CentringBox>
     </>
   );
