@@ -1,5 +1,5 @@
-import { Box, Typography, styled } from "@mui/material";
-import classes from "./Contacts.module.scss";
+import { Box, styled } from "@mui/material";
+// import classes from "./Contacts.module.scss";
 import ContactList from "./ContactList";
 import Map from "./Map";
 // import Map from "./Map";
@@ -15,7 +15,7 @@ const Contacts = () => {
     // margin: "0 200px"
   });
 
-  const MapBox = styled(Box)({});
+  // const MapBox = styled(Box)({});
 
   return (
     <>

@@ -1,4 +1,4 @@
-import { GoogleMap, useLoadScript, Marker, MarkerF } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 
 // type Props = {}
 
