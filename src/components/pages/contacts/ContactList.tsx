@@ -4,7 +4,7 @@ import { Box, Typography, styled } from "@mui/material";
 
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import HomeWorkOutlinedIcon from '@mui/icons-material/HomeWorkOutlined';
+import HomeWorkOutlinedIcon from "@mui/icons-material/HomeWorkOutlined";
 
 // type Props = {}
 
@@ -26,7 +26,9 @@ const ContactList = () => {
   return (
     <SeparatingBox>
       {" "}
-      <Typography variant="h4">Контакти</Typography>
+      <Typography sx={{ fontWeight: "500" }} variant="h4">
+        Контакти
+      </Typography>
       <Box>
         <Typography variant="h6">Для підключення послуг:</Typography>
         <Box>
