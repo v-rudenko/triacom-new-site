@@ -1,16 +1,26 @@
 import React from "react";
 
 import { Box, Typography, styled } from "@mui/material";
+
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import HomeWorkOutlinedIcon from '@mui/icons-material/HomeWorkOutlined';
+
 // type Props = {}
 
-const SeparatingBox = styled(Box) ({
+const SeparatingBox = styled(Box)({
   display: "flex",
   flexDirection: "column",
   gap: 15,
-  margin: "10px 100px"
+  margin: "10px 100px",
   // di
   // gap: "20px"
-})
+});
+
+const PhoneNumberBox = styled(Box)({
+  display: "flex",
+  gap: 5,
+});
 
 const ContactList = () => {
   return (
@@ -20,32 +30,62 @@ const ContactList = () => {
       <Box>
         <Typography variant="h6">Для підключення послуг:</Typography>
         <Box>
-          <Typography>(044) 591-11-44</Typography>
-          <Typography>sales@triacom.ua</Typography>
+          <Box>
+            <PhoneNumberBox>
+              <PhoneIcon />
+              <Typography>(044) 591-11-44</Typography>
+            </PhoneNumberBox>
+          </Box>
+          <PhoneNumberBox>
+            <EmailOutlinedIcon />
+            <Typography>sales@triacom.ua</Typography>
+          </PhoneNumberBox>
         </Box>
       </Box>
       <Box>
         <Typography variant="h6">Обслуговування абонентів:</Typography>
         <Box>
-          <Typography>(044) 591-11-44</Typography>
-          <Typography>ao@triacom.ua</Typography>
+          <PhoneNumberBox>
+            <PhoneIcon />
+            <Typography>(044) 591-11-44</Typography>
+          </PhoneNumberBox>
+          <PhoneNumberBox>
+            <EmailOutlinedIcon />
+            <Typography>ao@triacom.ua</Typography>
+          </PhoneNumberBox>
         </Box>
       </Box>
       <Box>
         <Typography variant="h6">Технічна підтримка:</Typography>
         <Box>
-          <Typography>(044) 591-0-591</Typography>
-          <Typography>support@triacom.ua</Typography>
+          <PhoneNumberBox>
+            <PhoneIcon />
+            <Typography>(044) 591-0-591</Typography>
+          </PhoneNumberBox>
+          <PhoneNumberBox>
+            <EmailOutlinedIcon />
+            <Typography>support@triacom.ua</Typography>
+          </PhoneNumberBox>
         </Box>
       </Box>
       <Box>
         <Typography variant="h6">Наш офіс:</Typography>
         <Box>
-          <Typography>(044) 591-11-11</Typography>
-          <Typography>info@triacom.ua</Typography>
+          <PhoneNumberBox>
+            <PhoneIcon />
+            <Typography>(044) 591-11-11</Typography>
+          </PhoneNumberBox>
+          <PhoneNumberBox>
+            <EmailOutlinedIcon />
+            <Typography>info@triacom.ua</Typography>
+          </PhoneNumberBox>
+
           <Box>
-            <Typography>Адреса:</Typography>
-            <Typography>04080, м. Київ вул. Тульчинська, 6</Typography>
+            <PhoneNumberBox>
+              <HomeWorkOutlinedIcon />
+              <Typography sx={{ fontWeight: "500" }}>Адреса:</Typography>
+              <Typography>04080, м. Київ вул. Тульчинська, 6</Typography>
+            </PhoneNumberBox>
           </Box>
         </Box>
       </Box>
