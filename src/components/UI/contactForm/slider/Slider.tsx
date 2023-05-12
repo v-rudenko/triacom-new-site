@@ -14,6 +14,7 @@ import HelenLogo from "./icons/Helen_Marlen_Logo.png";
 import KonicaLogo from "./icons/Konica_Minolta_Logo.png";
 import LuxopticaLogo from "./icons/Luxoptica_Logo.png";
 import AvellumLogo from "./icons/Avellum_Logo.png";
+import HrinchenkaLogo from "./icons/Hrinchenka_Logo.png"
 
 // type Props = {};
 
@@ -42,6 +43,9 @@ const Slider = () => {
       >
         <SwiperSlide className={classes.slide}>
           <img draggable={false} height={50} src={BoryspilLogo} />
+        </SwiperSlide>
+        <SwiperSlide className={classes.slide}>
+          <img draggable={false} height={150} src={HrinchenkaLogo} />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
           <img draggable={false} height={100} width={100} src={ZhulianyLogo} />
