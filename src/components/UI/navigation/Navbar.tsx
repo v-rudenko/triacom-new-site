@@ -19,9 +19,9 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 const StyledButton = styled(Button)(({ theme }) => ({
   color: "#424242",
-  fontSize: 14,
+  fontSize: 18,
   [theme.breakpoints.down("xl")]: {
-    fontSize: 12
+    fontSize: 14
   },
 }));
 
@@ -47,9 +47,9 @@ const Navbar = () => {
           <PhoneNumber description="Замовити послугу">
             (044) 591-11-44
           </PhoneNumber>
-          <PhoneNumber description="Технічна підтримка">
+          {/* <PhoneNumber description="Технічна підтримка">
             (044) 591-0-591
-          </PhoneNumber>
+          </PhoneNumber> */}
         </Box>
       </StyledToolbar>
     </AppBar>

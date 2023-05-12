@@ -1,0 +1,36 @@
+.main_slider {
+  height: 100%;
+  width: 100%;
+}
+
+.main_slider_slide {
+
+}
+
+.relative_div {
+  position: relative;
+  // height: 400px;
+}
+
+.banner_desc_div {
+  // padding-top: 10px;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  background-color: #d6e6f2;
+  border-top-right-radius: 36px;
+  border-bottom-right-radius: 53%;
+  h4 {
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+  }
+}
+
+.banner_list_div {
+  text-align: left;
+  margin-top: 70px;
+  margin-left: 20px;
+}
