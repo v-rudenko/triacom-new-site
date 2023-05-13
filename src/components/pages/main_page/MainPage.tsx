@@ -10,7 +10,6 @@ const MainPage = () => {
   return (
     <>
       {/* <BackgroundImage /> */}
-      <Navbar />
       <ContactForm />
       <Slider />
       <SolutionsList />

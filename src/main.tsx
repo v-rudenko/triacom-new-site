@@ -9,9 +9,7 @@ import Admin from "./components/admin/Admin.tsx";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/triacom-new-site/*" element={<App />}></Route>
-      </Routes>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );

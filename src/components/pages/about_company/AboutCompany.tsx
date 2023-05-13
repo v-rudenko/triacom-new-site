@@ -5,7 +5,6 @@ import Navbar from "../../UI/navigation/Navbar";
 const AboutCompany = () => {
   return (
     <div>
-      <Navbar />
       <div>Про компанію </div>
     </div>
   );

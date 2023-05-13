@@ -20,7 +20,6 @@ const Contacts = () => {
 
   return (
     <>
-      <Navbar />
       <CentringBox>
         <ContactList />
         <Map></Map>
