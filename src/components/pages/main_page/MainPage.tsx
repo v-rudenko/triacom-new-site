@@ -8,7 +8,7 @@ import SolutionsList from "../../UI/solutions/SolutionsList";
 const MainPage = () => {
   return (
     <>
-      <BackgroundImage />
+      {/* <BackgroundImage /> */}
       <ContactForm />
       <Slider />
       <SolutionsList />

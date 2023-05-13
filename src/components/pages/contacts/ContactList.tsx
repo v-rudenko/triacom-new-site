@@ -12,6 +12,9 @@ const SeparatingBox = styled(Box)({
   flexDirection: "column",
   gap: 15,
   margin: "10px 100px",
+  padding: "20px",
+  backgroundColor: "#d6e6f2d9",
+  borderRadius: "20px"
   // di
   // gap: "20px"
 });
