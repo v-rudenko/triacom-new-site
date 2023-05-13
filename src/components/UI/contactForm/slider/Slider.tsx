@@ -31,13 +31,9 @@ const Slider = () => {
         loop={true}
         spaceBetween={200}
         slidesPerView={4}
-        onSlideChange={() => console.log("slide changed")}
         autoplay={{
           delay: 3000,
           disableOnInteraction: true,
-        }}
-        onSwiper={(swiper) => {
-          console.log(swiper);
         }}
         className={classes.slider}
       >

@@ -26,7 +26,7 @@ const MainSlider = () => {
       slidesPerView={1}
       className={classes.main_slider}
       autoplay={{
-        delay: 3000,
+        delay: 4000,
         disableOnInteraction: true,
       }}
     >
