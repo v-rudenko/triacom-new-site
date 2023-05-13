@@ -15,11 +15,10 @@ function App() {
     <>  
       <Navbar />
       <Routes>
-        <Route path="triacom-new-site" element={<MainPage />}></Route>
-        <Route path="triacom-new-site/about-company" element={<AboutCompany />}></Route>
-        <Route path="triacom-new-site/questions" element={<Questions />}></Route>
-        <Route path="triacom-new-site/contacts" element={<Contacts />}></Route>
-        <Route path="triacom-new-site/admin" element={<Admin />} ></Route>
+        <Route path="/" element={<MainPage />}></Route>
+        <Route path="/about-company" element={<AboutCompany />}></Route>
+        <Route path="/questions" element={<Questions />}></Route>
+        <Route path="/contacts" element={<Contacts />}></Route>
       </Routes>
     </>
   );
