@@ -11,7 +11,7 @@ import girlBanner from "../banner/girl-banner-edited.jpg";
 
 import classes from "./MainSlider.module.scss";
 
-import SupportImage from "./images/support.jpg";
+import SupportImage from "./images/support.jfif";
 
 // type Props = {}
 

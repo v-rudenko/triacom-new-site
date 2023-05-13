@@ -21,7 +21,7 @@ import HrinchenkaLogo from "./icons/Hrinchenka_Logo.png"
 const Slider = () => {
   return (
     // <Swiper spaceBetween={50} slidesPerView={4} className={classes.slider} >
-    <>
+    <div className={classes.carusel_div}>
       <h1 className={classes.heading_text}>Нам довіряють</h1>
       <Swiper
         draggable={false}
@@ -69,7 +69,7 @@ const Slider = () => {
           <img draggable={false} src={VidiLogo} height={100} alt="" />
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 

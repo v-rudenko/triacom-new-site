@@ -1,5 +1,5 @@
 import { Box, Button, TextField, Typography, styled } from "@mui/material";
-import Banner from "./banner/banner3.avif";
+import BackgroundNetwork from "./banner/banner3.avif";
 import classes from "./ContactForm.module.scss";
 import GirlBanner from "./banner/GirlBanner";
 import Slider from "./slider/Slider";
@@ -84,11 +84,8 @@ const ContactForm = () => {
           </form>
         </div>
       </FormWrapper>
-      <div className={classes.carusel_div}>
-        <Slider></Slider>
-      </div>
 
-      <img className={classes.background} src={Banner} alt="" />
+      {/* <img className={classes.background} src={BackgroundNetwork} alt="" /> */}
     </div>
   );
 };

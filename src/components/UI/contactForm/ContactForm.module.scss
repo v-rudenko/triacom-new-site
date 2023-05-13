@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;800&display=swap');
 
-.background {
-  position: absolute;
-  // position: fixed;
-  transform: scale(-1, 1);
-  max-width: 100%;
-  opacity: 0.6;
-  top: 0;
-  z-index: -1;
-}
+
 .form_div {
   display: flex;
   // flex: 2;
@@ -32,8 +24,6 @@
   flex: 3;
 }
 
-.carusel_div {
-  text-align: center;
-}
+
 
 
