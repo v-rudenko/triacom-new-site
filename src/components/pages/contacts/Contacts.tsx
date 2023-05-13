@@ -2,6 +2,7 @@ import { Box, styled } from "@mui/material";
 // import classes from "./Contacts.module.scss";
 import ContactList from "./ContactList";
 import Map from "./Map";
+import Navbar from "../../UI/navigation/Navbar";
 // import Map from "./Map";
 // type Props = {}
 
@@ -19,6 +20,7 @@ const Contacts = () => {
 
   return (
     <>
+      <Navbar />
       <CentringBox>
         <ContactList />
         <Map></Map>
