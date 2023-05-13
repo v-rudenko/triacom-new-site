@@ -10,11 +10,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        {/* <App /> */}
         <Route path="/triacom-new-site/*" element={<App />}></Route>
-        <Route path="/triacom-new-site/admin" element={<Admin />}></Route>
-        {/* <Route path="/triacom-new-site/about-company" element={<Admin />}></Route>
-        <Route path="/triacom-new-site/contacts" element={<Admin />}></Route> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
