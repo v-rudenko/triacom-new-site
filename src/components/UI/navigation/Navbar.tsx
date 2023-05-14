@@ -6,7 +6,8 @@ import PhoneNumber from "./PhoneNumber";
 import classes from "./Navbar.module.scss";
 import { Link } from "react-router-dom";
 
-const URL = "/triacom-new-site";
+// const URL = "/triacom-new-site";
+const URL = "";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",

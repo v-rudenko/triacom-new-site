@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import BackgroundImage from "../UI/background/BackgroundImage";
 import Navbar from "../UI/navigation/Navbar";
+import { ScrollRestoration } from "react-router-dom";
 
 const RootLayout = () => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const RootLayout = () => {
     <>
       <Navbar />
       <BackgroundImage />
+      <ScrollRestoration />
       <Outlet />
     </>
   );

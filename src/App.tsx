@@ -2,7 +2,8 @@ import "./App.scss";
 // import Navbar from "./components/UI/navigation/Navbar";
 
 import {
-  createBrowserRouter,
+  // createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import AboutCompany from "./components/pages/about_company/AboutCompany";
@@ -11,20 +12,28 @@ import MainPage from "./components/pages/main_page/MainPage";
 import Questions from "./components/pages/questions/Questions";
 import Admin from "./components/admin/Admin";
 import RootLayout from "./components/pages/Root";
+import Internet from "./components/pages/services/Internet";
 
-const router = createBrowserRouter([
+// const PATH = "/triacom-new-site"
+const PATH = "/";
+// const PATH = "v-rudenko.github.io/triacom-new-site/"
+
+const router = createHashRouter([
   {
-    path: "/triacom-new-site",
+    path: PATH,
     element: <RootLayout />,
     children: [
-      { path: "/triacom-new-site", element: <MainPage /> },
-      { path: "/triacom-new-site/about-company", element: <AboutCompany /> },
-      { path: "/triacom-new-site/questions", element: <Questions /> },
-      { path: "/triacom-new-site/contacts", element: <Contacts /> },
+      // Navbar
+      { path: PATH, element: <MainPage /> },
+      { path: PATH + "/about-company", element: <AboutCompany /> },
+      { path: PATH + "/questions", element: <Questions /> },
+      { path: PATH + "/contacts", element: <Contacts /> },
+      // ПОСЛУГИ
+      { path: PATH + "/internet", element: <Internet /> },
     ],
   },
   {
-    path: "/triacom-new-site/admin",
+    path: PATH + "/admin",
     element: <Admin />,
   },
 ]);

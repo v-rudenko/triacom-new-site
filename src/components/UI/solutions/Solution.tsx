@@ -1,4 +1,5 @@
 import { Box, Button, styled, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 type Props = {
   title: string;
@@ -39,7 +40,9 @@ const Solution = (props: Props) => {
         <Typography variant="h6">{props.title}</Typography>
       </Box>
       <Typography>{props.description}</Typography>
-      <Button variant="outlined">Докладніше</Button>
+      <Link to={"/internet"}>
+        <Button variant="outlined">Докладніше</Button>
+      </Link>
     </SolutionBox>
   );
 };
