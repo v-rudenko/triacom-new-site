@@ -39,7 +39,7 @@ const Solution = (props: Props) => {
         <Typography variant="h6">{props.title}</Typography>
       </Box>
       <Typography>{props.description}</Typography>
-      <Button variant="outlined">Переглянути тарифи</Button>
+      <Button variant="outlined">Докладніше</Button>
     </SolutionBox>
   );
 };
