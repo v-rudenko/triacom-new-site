@@ -22,7 +22,7 @@ const RootLayout = () => {
   return (
     <>
       <Navbar />
-      <BackgroundImage />
+      {/* <BackgroundImage /> */}
       <ScrollRestoration />
       <Outlet />
     </>

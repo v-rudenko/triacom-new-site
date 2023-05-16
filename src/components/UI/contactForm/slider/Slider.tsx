@@ -16,10 +16,10 @@ import LuxopticaLogo from "./icons/Luxoptica_Logo.png";
 import AvellumLogo from "./icons/Avellum_Logo.png";
 import HrinchenkaLogo from "./icons/Hrinchenka_Logo.png";
 import KovalskaLogo from "./icons/Kovalska_logo_black.png";
-import PodatkovaLogo from "./icons/Podatkova_Logo.png"
-import OceanLogo from "./icons/Ocean_Logo.png"
-import NMULogo from "./icons/NMU_Logo.svg"
-import NAULogo from "./icons/NAU_logo.png"
+import PodatkovaLogo from "./icons/Podatkova_Logo.png";
+import OceanLogo from "./icons/Ocean_Logo.png";
+import NMULogo from "./icons/NMU_Logo.svg";
+import NAULogo from "./icons/NAU_Logo.png";
 
 // type Props = {};
 
@@ -58,34 +58,19 @@ const Slider = () => {
           <img draggable={false} width={250} src={NMULogo} />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img draggable={false} height={100}  src={ZhulianyLogo} />
+          <img draggable={false} height={100} src={ZhulianyLogo} />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
           <img draggable={false} src={DreamLogo} height={100} alt="" />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img
-            draggable={false}
-            src={AvellumLogo}
-            width={200}
-            alt=""
-          />
+          <img draggable={false} src={AvellumLogo} width={200} alt="" />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img
-            draggable={false}
-            src={NAULogo}
-            height={130}
-            alt=""
-          />
+          <img draggable={false} src={NAULogo} height={130} alt="" />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img
-            draggable={false}
-            src={HelenLogo}
-            height={70}
-            alt=""
-          />
+          <img draggable={false} src={HelenLogo} height={70} alt="" />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
           <img draggable={false} src={KonicaLogo} height={100} alt="" />
