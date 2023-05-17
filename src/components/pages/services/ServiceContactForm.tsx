@@ -29,7 +29,7 @@ const FormContainer = styled(Box)({
   flexDirection: "column",
   // background: "#1c92d2",
   // background: "#F7FBFC",
-  background: "#D6E6F2",
+  background: "#F5FAFE",
   padding: "2rem 2rem 1.5rem",
   borderRadius: "15px",
   width: "600px",

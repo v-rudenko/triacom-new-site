@@ -16,7 +16,7 @@ import StackOfThree from "../../../UI/services/StackOfThree";
 const CentringBox = styled(Box)({
   display: "flex",
   justifyContent: " space-around",
-  margin: "100px 150px 70px",
+  margin: "70px 150px 70px",
 });
 
 const InternetTextBox = styled(Box)({
