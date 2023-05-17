@@ -3,11 +3,11 @@ import { Box, styled } from "@mui/material";
 import ContactList from "./ContactList";
 import Map from "./Map";
 import Navbar from "../../UI/navigation/Navbar";
+import BackgroundImage from "../../UI/background/BackgroundImage";
 // import Map from "./Map";
 // type Props = {}
 
 const Contacts = () => {
-
   const CentringBox = styled(Box)({
     display: "flex",
     flexDirection: "row",
@@ -24,6 +24,7 @@ const Contacts = () => {
         <ContactList />
         <Map></Map>
       </CentringBox>
+      <BackgroundImage />
     </>
   );
 };

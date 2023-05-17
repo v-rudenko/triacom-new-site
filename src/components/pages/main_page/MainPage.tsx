@@ -9,7 +9,7 @@ import Navbar from "../../UI/navigation/Navbar";
 const MainPage = () => {
   return (
     <>
-      {/* <BackgroundImage /> */}
+      <BackgroundImage />
       <ContactForm />
       <Slider />
       <SolutionsList />

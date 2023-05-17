@@ -12,7 +12,7 @@ import MainPage from "./components/pages/main_page/MainPage";
 import Questions from "./components/pages/questions/Questions";
 import Admin from "./components/admin/Admin";
 import RootLayout from "./components/pages/Root";
-import Internet from "./components/pages/services/Internet";
+import Internet from "./components/pages/services/internet/Internet";
 
 // const PATH = "/triacom-new-site"
 const PATH = "/";

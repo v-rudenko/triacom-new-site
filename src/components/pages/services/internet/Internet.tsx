@@ -1,12 +1,12 @@
 // import React from 'react'
 
-import { Height } from "@mui/icons-material";
-import { Box, Button, Typography, styled } from "@mui/material";
+import { Box, Button, Modal, Typography, styled } from "@mui/material";
 
 import classes from "./Internet.module.scss";
 
 import LaptopSVG from "./images/Laptop3.svg";
 import CheckboxSVG from "./images/Checkbox.svg";
+import { useState } from "react";
 
 // type Props = {}
 
@@ -61,8 +61,12 @@ const StyledButton = styled(Button) ({
 
 
 const Internet = () => {
+  const [modalOpen, setModalOpen] = useState(false)
   return (
     <CentringBox>
+      <Modal open={modalOpen} onClose={modalCloseHandler}>
+        {/* <Conta /> */}
+      </Modal>
       <InternetTextBox>
         <HeadingText variant="h5">Швидкісний Інтернет для бізнесу.</HeadingText>
         <SubHeadingText>
