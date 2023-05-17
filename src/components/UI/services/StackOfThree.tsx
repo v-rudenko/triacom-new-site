@@ -9,9 +9,10 @@ import WorkIcon from '@mui/icons-material/Work';
 // type Props = {}
 
 const StackItem = styled(Box)({
-  padding: "40px 100px",
+  // padding: "40px 70px",
   display: 'flex',
-  alignItems: "center"
+  alignItems: "center",
+  // maxWidth: "400px"
 });
 
 const StackHeading = styled(Typography) ({
@@ -44,10 +45,10 @@ const StackOfThree = () => {
   return (
     <Stack
         direction="row"
-        justifyContent={"center"}
+        justifyContent={"space-evenly"}
         divider={<Divider orientation="vertical" flexItem />}
         spacing={2}
-        sx={{ maxHeight: "200px" }}
+        sx={{ maxHeight: "200px", padding: "40px 100px" }}
       >
         <StackItem>
           <IconBox><PersonIcon sx={{ color: "#F5FAFE" }} /></IconBox>
