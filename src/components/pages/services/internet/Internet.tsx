@@ -1,6 +1,6 @@
 // import React from 'react'
 
-import { Box, Button, Modal, Typography, styled } from "@mui/material";
+import { Box, Button, Stack, Typography, styled } from "@mui/material";
 
 import classes from "./Internet.module.scss";
 
@@ -8,17 +8,20 @@ import LaptopSVG from "./images/Laptop3.svg";
 import CheckboxSVG from "./images/Checkbox.svg";
 import { useState } from "react";
 
+import ServiceContactForm from "../ServiceContactForm";
+import StackOfThree from "../../../UI/services/StackOfThree";
+
 // type Props = {}
 
 const CentringBox = styled(Box)({
   display: "flex",
   justifyContent: " space-around",
-  margin: "100px 150px",
+  margin: "100px 150px 70px",
 });
 
 const InternetTextBox = styled(Box)({
-  width: "427.88px",
-  height: "420.45px",
+  width: "560px",
+  // height: "420.45px",
   // border: "1px solid red",
 });
 
@@ -45,7 +48,7 @@ const SubHeadingText = styled(Typography)({
 const CheckboxTextBox = styled(Box)({
   display: "flex",
   marginTop: "20px",
-  // alignItems: "center"
+  alignItems: "flex-start",
 });
 
 const CheckboxText = styled(Typography)({
@@ -55,48 +58,85 @@ const CheckboxText = styled(Typography)({
   lineHeight: "30px",
 });
 
-const StyledButton = styled(Button) ({
+const StackItem = styled(Box)({});
 
-})
+const CounterBox = styled(Box)({});
 
+const StyledButton = styled(Button)({});
 
 const Internet = () => {
-  const [modalOpen, setModalOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const modalOpenHandler = () => setModalOpen(true);
+
+  const modalCloseHandler = () => setModalOpen(false);
+
   return (
-    <CentringBox>
-      <Modal open={modalOpen} onClose={modalCloseHandler}>
-        {/* <Conta /> */}
-      </Modal>
-      <InternetTextBox>
-        <HeadingText variant="h5">Швидкісний Інтернет для бізнесу.</HeadingText>
-        <SubHeadingText>
-          Відчуйте всі переваги швидкісного оптичного Інтернету з пропускною здатністю до 10 Гбіт/c.
-        </SubHeadingText>
-        <CheckboxTextBox>
-          <img src={CheckboxSVG} alt="" />{" "}
-          <CheckboxText sx={{ml: 1}}>Висока надійність каналів</CheckboxText>
-        </CheckboxTextBox>
-        <CheckboxTextBox>
-          <img src={CheckboxSVG} alt="" />{" "}
-          <CheckboxText sx={{ml: 1}}>Гнучкі тарифи від 1Мбіт/c до 10Гбіт/с</CheckboxText>
-        </CheckboxTextBox>
-        <CheckboxTextBox>
-          <img src={CheckboxSVG} alt="" />{" "}
-          <CheckboxText sx={{ml: 1}}>Симетрична швидкість</CheckboxText>
-        </CheckboxTextBox>
-        <CheckboxTextBox>
-          <img src={CheckboxSVG} alt="" />{" "}
-          <CheckboxText sx={{ml: 1}}>Кваліфікована цілодобова технічна підтримка</CheckboxText>
-        </CheckboxTextBox>
-        <CheckboxTextBox>
-          {/* <CheckboxText sx={{ml: 4, mt: 1}}><button className={classes.button}>Замовити послугу</button></CheckboxText> */}
-          <CheckboxText sx={{ml: 4, mt: 1}}><StyledButton variant="outlined" size="large">Замовити послугу</StyledButton></CheckboxText>
-        </CheckboxTextBox>
-      </InternetTextBox>
-      <InternetImageBox>
-        <img src={LaptopSVG} alt="" />
-      </InternetImageBox>
-    </CentringBox>
+    <>
+      <CentringBox>
+        <ServiceContactForm
+          isOpen={modalOpen}
+          onModalClose={modalCloseHandler}
+        />
+        <InternetTextBox>
+          <HeadingText variant="h5">
+            Швидкісний Інтернет для бізнесу.
+          </HeadingText>
+          <SubHeadingText>
+            Відчуйте всі переваги швидкісного оптичного Інтернету з пропускною
+            здатністю до 10 Гбіт/c.
+          </SubHeadingText>
+          <CheckboxTextBox>
+            <img className={classes.checkbox} src={CheckboxSVG} alt="" />{" "}
+            <CheckboxText sx={{ ml: 1 }}>
+              Розгалужена оптична мережа загальною довжиною &gt; 1000 кілометрів
+            </CheckboxText>
+          </CheckboxTextBox>
+          <CheckboxTextBox>
+            <img className={classes.checkbox} src={CheckboxSVG} alt="" />{" "}
+            <CheckboxText sx={{ ml: 1 }}>
+              Гнучкі тарифи від 1Мбіт/c до 10Гбіт/с
+            </CheckboxText>
+          </CheckboxTextBox>
+          <CheckboxTextBox>
+            <img className={classes.checkbox} src={CheckboxSVG} alt="" />{" "}
+            <CheckboxText sx={{ ml: 1 }}>
+              Статична зовнішня IP-адреса
+            </CheckboxText>
+          </CheckboxTextBox>
+          <CheckboxTextBox>
+            <img className={classes.checkbox} src={CheckboxSVG} alt="" />{" "}
+            <CheckboxText sx={{ ml: 1 }}>
+              Оптична лінія зв'язку до кінцевого абонента за технологією WDM та
+              CWDM
+            </CheckboxText>
+          </CheckboxTextBox>
+          <CheckboxTextBox>
+            <img className={classes.checkbox} src={CheckboxSVG} alt="" />{" "}
+            <CheckboxText sx={{ ml: 1 }}>
+              Кваліфікована цілодобова технічна підтримка
+            </CheckboxText>
+          </CheckboxTextBox>
+          <CheckboxTextBox>
+            {/* <CheckboxText sx={{ml: 4, mt: 1}}><button className={classes.button}>Замовити послугу</button></CheckboxText> */}
+            <CheckboxText sx={{ ml: 4, mt: 1 }}>
+              <StyledButton
+                onClick={modalOpenHandler}
+                variant="outlined"
+                size="large"
+              >
+                Замовити послугу
+              </StyledButton>
+            </CheckboxText>
+          </CheckboxTextBox>
+        </InternetTextBox>
+        <InternetImageBox>
+          <img src={LaptopSVG} alt="" />
+        </InternetImageBox>
+      </CentringBox>
+
+      <StackOfThree />
+    </>
   );
 };
 
