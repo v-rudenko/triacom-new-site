@@ -48,7 +48,7 @@ const StackOfThree = () => {
         justifyContent={"space-evenly"}
         divider={<Divider orientation="vertical" flexItem />}
         spacing={2}
-        sx={{ maxHeight: "200px", padding: "40px 100px" }}
+        sx={{ padding: "40px 100px" }}
       >
         <StackItem>
           <IconBox><PersonIcon sx={{ color: "#F5FAFE" }} /></IconBox>
