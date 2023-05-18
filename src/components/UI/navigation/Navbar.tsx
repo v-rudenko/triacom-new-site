@@ -30,13 +30,22 @@ const StyledButton = styled(Button)(({ theme }) => ({
 }));
 
 const Navbar = () => {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const menuClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
+  const [services, setServices] = useState<null | HTMLElement>(null);
+  const servicesOpen = Boolean(services);
+  const servicesClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setServices(event.currentTarget);
   };
-  const menuCloseHandler = () => {
-    setAnchorEl(null);
+  const servicesCloseHandler = () => {
+    setServices(null);
+  };
+  
+  const [aboutCompany, setAboutCompany] = useState<null | HTMLElement>(null);
+  const aboutCompanyOpen = Boolean(aboutCompany);
+  const aboutCompanyClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAboutCompany(event.currentTarget);
+  };
+  const aboutCompanyCloseHandler = () => {
+    setAboutCompany(null);
   };
   return (
     <AppBar
@@ -56,26 +65,43 @@ const Navbar = () => {
             />
           </Link>
           <Box sx={{ mt: 5 }}>
-            <StyledButton startIcon={<KeyboardArrowDownIcon />}>
+            <StyledButton id="services" onClick={servicesClickHandler} startIcon={<KeyboardArrowDownIcon />}>
               Послуги
+              <Menu
+              id="services-menu"
+              anchorEl={services}
+              open={servicesOpen}
+              onClose={servicesCloseHandler}
+              MenuListProps={{
+                "aria-labelledby": "services",
+              }}
+              
+            >
+              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/internet`}>Інтернет</Link></MenuItem>
+              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/telephony`}>Телефонія</Link></MenuItem>
+              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/colocation`}>Колокейшн</Link></MenuItem>
+              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/data-links`}>Канали зв'язку</Link></MenuItem>
+              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/virtual-pbx`}>Віртуальна АТС</Link></MenuItem>
+              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/hosting`}>Хостинг</Link></MenuItem>
+            </Menu>
             </StyledButton>
             {/* <Link draggable={false} to={`${URL}/about-company`}> */}
-            <StyledButton id="about-company" onClick={menuClickHandler} startIcon={<KeyboardArrowDownIcon />}>
+            <StyledButton id="about-company" onClick={aboutCompanyClickHandler} startIcon={<KeyboardArrowDownIcon />}>
               Про Компанію
             </StyledButton>
             <Menu
               id="about-company-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={menuCloseHandler}
+              anchorEl={aboutCompany}
+              open={aboutCompanyOpen}
+              onClose={aboutCompanyCloseHandler}
               MenuListProps={{
                 "aria-labelledby": "about-company",
               }}
               
             >
-              <MenuItem onClick={menuCloseHandler}><Link className={classes.menu_link} to={`${URL}/history`}>Історія компанії</Link></MenuItem>
-              <MenuItem onClick={menuCloseHandler}><Link className={classes.menu_link} to={`${URL}/documents`}>Дозвільні документи</Link></MenuItem>
-              <MenuItem onClick={menuCloseHandler}><Link className={classes.menu_link} to={`${URL}/reports`}>Звіти</Link></MenuItem>
+              <MenuItem onClick={aboutCompanyCloseHandler}><Link className={classes.menu_link} to={`${URL}/history`}>Історія компанії</Link></MenuItem>
+              <MenuItem onClick={aboutCompanyCloseHandler}><Link className={classes.menu_link} to={`${URL}/documents`}>Дозвільні документи</Link></MenuItem>
+              <MenuItem onClick={aboutCompanyCloseHandler}><Link className={classes.menu_link} to={`${URL}/reports`}>Звіти</Link></MenuItem>
             </Menu>
             {/* </Link> */}
             <Link to={`${URL}/questions`}>
