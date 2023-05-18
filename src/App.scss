@@ -1,8 +1,13 @@
 body {
-  margin: 0;
+  margin: 0 auto;
+  width: 100vw;
+  // max-width: 100%;
   background-color: #F6F6F6;
   // background-color: #F5FAFE;
-  // overflow: hidden;
+  overflow-x: hidden;
+}
+html {
+  margin: 0 auto;
 }
 
 * {

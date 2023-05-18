@@ -2,3 +2,13 @@
   margin: 15px;
   user-select: none;
 }
+
+.menu_link {
+  text-decoration: none;
+  &:link {
+    color: #424242;
+  }
+  &:visited {
+    color: #424242;
+  }
+}
