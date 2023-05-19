@@ -27,6 +27,17 @@ const StyledButton = styled(Button)(({ theme }) => ({
   [theme.breakpoints.down("xl")]: {
     fontSize: 14,
   },
+  [theme.breakpoints.down("lg")]: {
+    fontSize: 12,
+  },
+}));
+
+const NavButtonsBox = styled(Box) (({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  [theme.breakpoints.down("lg")]: {
+    // fontSize: 12
+  },
 }));
 
 const Navbar = () => {
@@ -64,7 +75,7 @@ const Navbar = () => {
               alt=""
             />
           </Link>
-          <Box sx={{ mt: 5 }}>
+          <NavButtonsBox >
             <StyledButton id="services" onClick={servicesClickHandler} startIcon={<KeyboardArrowDownIcon />}>
               Послуги
             </StyledButton>
@@ -111,7 +122,7 @@ const Navbar = () => {
             <Link to={`${URL}/contacts`}>
               <StyledButton>Контакти</StyledButton>
             </Link>
-          </Box>
+          </NavButtonsBox>
         </Box>
         <Box sx={{ display: { xs: "none", lg: "flex" }, flexDirection: "row" }}>
           {/* <StyledText>Технічна підтримка: &nbsp;</StyledText>

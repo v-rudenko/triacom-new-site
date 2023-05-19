@@ -7,7 +7,7 @@ const PhoneNumber = (props: Props) => {
     color: "#424242",
     fontSize: 20,
     [theme.breakpoints.down("xl")]: {
-      fontSize: 12
+      fontSize: 14
     },
   }));
 
