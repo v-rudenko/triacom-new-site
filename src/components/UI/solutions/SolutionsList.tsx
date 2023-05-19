@@ -43,6 +43,7 @@ const SolutionsList = () => {
           title="Інтернет"
           color="#007eff"
           description="Швидкісний Інтернет до 10 Гбіт/с"
+          path="/internet"
         >
           <LanguageIcon sx={{ fontSize }} />
         </Solution>
@@ -50,6 +51,7 @@ const SolutionsList = () => {
           title="Телефонія"
           color="#00bf00b5"
           description="Якісна телефонія на базі SIP та PRI"
+          path="/voip"
         >
           <PhoneInTalkIcon sx={{ fontSize }} />
         </Solution>
@@ -58,6 +60,7 @@ const SolutionsList = () => {
           description="Розміщення серверів в нашому дата центрі"
           // color="#ff0000d1"
           color="rgb(255 0 0 / 64%)"
+          path="/colocation"
         >
           <StorageIcon sx={{ fontSize }} />
         </Solution>
@@ -65,6 +68,7 @@ const SolutionsList = () => {
           title="Канали зв'язку"
           description="Поєднайте свій офіс, філію, склад в єдину систему "
           color="#007eff"
+          path="/data-links"
         >
           <AccountTreeIcon sx={{ fontSize }}></AccountTreeIcon>
         </Solution>
@@ -72,6 +76,7 @@ const SolutionsList = () => {
           title="Віртуальна АТС"
           description="Комплексне рішення питання телефонії"
           color="#00bf00b5"
+          path="/virtual-pbx"
         >
           <Box sx={{ position: "relative" }}>
             <CloudOutlinedIcon
@@ -91,6 +96,7 @@ const SolutionsList = () => {
           title="Хостинг"
           description="Доступний та зручний хостинг сайтів"
           color="rgb(255 0 0 / 64%)"
+          path="/hosting"
         >
           <WebOutlinedIcon sx={{ fontSize }} />
         </Solution>

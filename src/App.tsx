@@ -12,9 +12,16 @@ import MainPage from "./components/pages/main_page/MainPage";
 import Questions from "./components/pages/questions/Questions";
 import Admin from "./components/admin/Admin";
 import RootLayout from "./components/pages/Root";
+
+
 import Internet from "./components/pages/services/internet/Internet";
 import Documents from "./components/pages/about_company/Documents";
 import Reports from "./components/pages/about_company/Reports";
+import Voip from "./components/pages/services/voip/Voip";
+import Colocation from "./components/pages/services/colocation/Colocation";
+import DataLinks from "./components/pages/services/data_links/DataLinks";
+import VirtualPbx from "./components/pages/services/virtual_pbx/VirtualPbx";
+import Hosting from "./components/pages/services/hosting/Hosting";
 
 // const PATH = "/triacom-new-site"
 const PATH = "/";
@@ -34,6 +41,11 @@ const router = createHashRouter([
       { path: PATH + "/contacts", element: <Contacts /> },
       // ПОСЛУГИ
       { path: PATH + "/internet", element: <Internet /> },
+      { path: PATH + "/voip", element: <Voip /> },
+      { path: PATH + "/colocation", element: <Colocation /> },
+      { path: PATH + "/data-links", element: <DataLinks /> },
+      { path: PATH + "/virtual-pbx", element: <VirtualPbx /> },
+      { path: PATH + "/hosting", element: <Hosting /> },
     ],
   },
   {

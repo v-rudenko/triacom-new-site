@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography, styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import classes from "./MainSliderSection.module.scss";
 import GirlBanner from "./banner/GirlBanner";
 import ContactForm from "./ContactForm";

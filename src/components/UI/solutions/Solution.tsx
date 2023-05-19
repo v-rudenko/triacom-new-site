@@ -6,6 +6,7 @@ type Props = {
   description: string;
   color: string;
   children: JSX.Element;
+  path: string;
 };
 
 const Solution = (props: Props) => {
@@ -40,7 +41,7 @@ const Solution = (props: Props) => {
         <Typography variant="h6">{props.title}</Typography>
       </Box>
       <Typography>{props.description}</Typography>
-      <Link to={"/internet"}>
+      <Link to={props.path}>
         <Button variant="outlined">Докладніше</Button>
       </Link>
     </SolutionBox>

@@ -67,7 +67,8 @@ const Navbar = () => {
           <Box sx={{ mt: 5 }}>
             <StyledButton id="services" onClick={servicesClickHandler} startIcon={<KeyboardArrowDownIcon />}>
               Послуги
-              <Menu
+            </StyledButton>
+            <Menu
               id="services-menu"
               anchorEl={services}
               open={servicesOpen}
@@ -78,13 +79,12 @@ const Navbar = () => {
               
             >
               <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/internet`}>Інтернет</Link></MenuItem>
-              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/telephony`}>Телефонія</Link></MenuItem>
+              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/voip`}>Телефонія</Link></MenuItem>
               <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/colocation`}>Колокейшн</Link></MenuItem>
               <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/data-links`}>Канали зв'язку</Link></MenuItem>
               <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/virtual-pbx`}>Віртуальна АТС</Link></MenuItem>
               <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/hosting`}>Хостинг</Link></MenuItem>
             </Menu>
-            </StyledButton>
             {/* <Link draggable={false} to={`${URL}/about-company`}> */}
             <StyledButton id="about-company" onClick={aboutCompanyClickHandler} startIcon={<KeyboardArrowDownIcon />}>
               Про Компанію
@@ -99,9 +99,9 @@ const Navbar = () => {
               }}
               
             >
-              <MenuItem onClick={aboutCompanyCloseHandler}><Link className={classes.menu_link} to={`${URL}/history`}>Історія компанії</Link></MenuItem>
-              <MenuItem onClick={aboutCompanyCloseHandler}><Link className={classes.menu_link} to={`${URL}/documents`}>Дозвільні документи</Link></MenuItem>
-              <MenuItem onClick={aboutCompanyCloseHandler}><Link className={classes.menu_link} to={`${URL}/reports`}>Звіти</Link></MenuItem>
+              <Link className={classes.menu_link} to={`${URL}/history`}><MenuItem onClick={aboutCompanyCloseHandler}>Історія компанії</MenuItem></Link>
+              <Link className={classes.menu_link} to={`${URL}/documents`}><MenuItem onClick={aboutCompanyCloseHandler}>Дозвільні документи</MenuItem></Link>
+              <Link className={classes.menu_link} to={`${URL}/reports`}> <MenuItem onClick={aboutCompanyCloseHandler}>Звіти</MenuItem></Link>
             </Menu>
             {/* </Link> */}
             <Link to={`${URL}/questions`}>

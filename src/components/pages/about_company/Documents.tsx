@@ -21,13 +21,6 @@ import atestat from "./documents/atestat.png";
 
 // type Props = {}
 
-const HistoryBox = styled(Box)({
-  margin: "50px 150px",
-  padding: "30px 20px",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-});
 
 const DocumentBox = styled(Box)({
   textAlign: "center",
