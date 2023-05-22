@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { AppBar, Box, Button, Menu, MenuItem, Toolbar, styled } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  Menu,
+  MenuItem,
+  Toolbar,
+  styled,
+} from "@mui/material";
 import TriacomLogo from "./images/triacom-logo.jpg";
 // import TriacomLogo from "./images/triangulum-logo.png";
 import PhoneNumber from "./PhoneNumber";
@@ -32,7 +40,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-const NavButtonsBox = styled(Box) (({ theme }) => ({
+const NavButtonsBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   [theme.breakpoints.down("lg")]: {
@@ -49,10 +57,12 @@ const Navbar = () => {
   const servicesCloseHandler = () => {
     setServices(null);
   };
-  
+
   const [aboutCompany, setAboutCompany] = useState<null | HTMLElement>(null);
   const aboutCompanyOpen = Boolean(aboutCompany);
-  const aboutCompanyClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const aboutCompanyClickHandler = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
     setAboutCompany(event.currentTarget);
   };
   const aboutCompanyCloseHandler = () => {
@@ -75,8 +85,12 @@ const Navbar = () => {
               alt=""
             />
           </Link>
-          <NavButtonsBox >
-            <StyledButton id="services" onClick={servicesClickHandler} startIcon={<KeyboardArrowDownIcon />}>
+          <NavButtonsBox>
+            <StyledButton
+              id="services"
+              onClick={servicesClickHandler}
+              startIcon={<KeyboardArrowDownIcon />}
+            >
               Послуги
             </StyledButton>
             <Menu
@@ -87,17 +101,36 @@ const Navbar = () => {
               MenuListProps={{
                 "aria-labelledby": "services",
               }}
-              
             >
-              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/internet`}>Інтернет</Link></MenuItem>
-              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/voip`}>Телефонія</Link></MenuItem>
-              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/colocation`}>Колокейшн</Link></MenuItem>
-              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/data-links`}>Канали зв'язку</Link></MenuItem>
-              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/virtual-pbx`}>Віртуальна АТС</Link></MenuItem>
-              <MenuItem onClick={servicesCloseHandler}><Link className={classes.menu_link} to={`${URL}/hosting`}>Хостинг</Link></MenuItem>
+              <Link className={classes.menu_link} to={`${URL}/internet`}>
+                <MenuItem onClick={servicesCloseHandler}>Інтернет</MenuItem>
+              </Link>
+              <Link className={classes.menu_link} to={`${URL}/voip`}>
+                <MenuItem onClick={servicesCloseHandler}>Телефонія</MenuItem>
+              </Link>
+              <Link className={classes.menu_link} to={`${URL}/colocation`}>
+                <MenuItem onClick={servicesCloseHandler}>Колокейшн</MenuItem>
+              </Link>
+              <Link className={classes.menu_link} to={`${URL}/data-links`}>
+                <MenuItem onClick={servicesCloseHandler}>
+                  Канали зв'язку
+                </MenuItem>
+              </Link>
+              <Link className={classes.menu_link} to={`${URL}/virtual-pbx`}>
+                <MenuItem onClick={servicesCloseHandler}>
+                  Віртуальна АТС
+                </MenuItem>
+              </Link>
+              <Link className={classes.menu_link} to={`${URL}/hosting`}>
+                <MenuItem onClick={servicesCloseHandler}>Хостинг</MenuItem>
+              </Link>
             </Menu>
             {/* <Link draggable={false} to={`${URL}/about-company`}> */}
-            <StyledButton id="about-company" onClick={aboutCompanyClickHandler} startIcon={<KeyboardArrowDownIcon />}>
+            <StyledButton
+              id="about-company"
+              onClick={aboutCompanyClickHandler}
+              startIcon={<KeyboardArrowDownIcon />}
+            >
               Про Компанію
             </StyledButton>
             <Menu
@@ -108,11 +141,21 @@ const Navbar = () => {
               MenuListProps={{
                 "aria-labelledby": "about-company",
               }}
-              
             >
-              <Link className={classes.menu_link} to={`${URL}/history`}><MenuItem onClick={aboutCompanyCloseHandler}>Історія компанії</MenuItem></Link>
-              <Link className={classes.menu_link} to={`${URL}/documents`}><MenuItem onClick={aboutCompanyCloseHandler}>Дозвільні документи</MenuItem></Link>
-              <Link className={classes.menu_link} to={`${URL}/reports`}> <MenuItem onClick={aboutCompanyCloseHandler}>Звіти</MenuItem></Link>
+              <Link className={classes.menu_link} to={`${URL}/history`}>
+                <MenuItem onClick={aboutCompanyCloseHandler}>
+                  Історія компанії
+                </MenuItem>
+              </Link>
+              <Link className={classes.menu_link} to={`${URL}/documents`}>
+                <MenuItem onClick={aboutCompanyCloseHandler}>
+                  Дозвільні документи
+                </MenuItem>
+              </Link>
+              <Link className={classes.menu_link} to={`${URL}/reports`}>
+                {" "}
+                <MenuItem onClick={aboutCompanyCloseHandler}>Звіти</MenuItem>
+              </Link>
             </Menu>
             {/* </Link> */}
             <Link to={`${URL}/questions`}>
