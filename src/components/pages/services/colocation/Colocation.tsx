@@ -1,13 +1,12 @@
 import { Box, Typography, styled } from "@mui/material";
 import colocationBanner from "./images/servers.png";
 import classes from "./Colocation.module.scss";
-import BackgroundImage from "../../../UI/background/BackgroundImage";
 import bg from "./images/bg.jpg";
 
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ColocationTable from "./ColocationTable";
 
-const CentringBox = styled(Box)({
+const CentringBox = styled(Box) (({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -16,30 +15,60 @@ const CentringBox = styled(Box)({
   gap: 25,
   // paddingBottom: "50px",
   // background: "#D6E6F2"
-});
+  [theme.breakpoints.down("xl")]: {
+    margin: "30px 50px",
+  },
+}));
 
-const BenefitsBox = styled(Box)({
+const BenefitsBox = styled(Box)(({ theme }) => ({
   display: "inline-flex",
   flexDirection: "column",
   alignSelf: "flex-start",
   // width: "100%",
-  marginLeft: "100px"
-});
+  marginLeft: "100px",
+  gap: 20,
+
+  [theme.breakpoints.down("xl")]: {
+    marginLeft: "20px",
+    gap: 20
+  },
+}));
 
 const CheckboxTextBox = styled(Box)({
   display: "flex",
-  marginTop: "20px",
+  // marginTop: "20px",
+  // lineHeight: 20,
   alignItems: "flex-start",
-  gap: 8
+  gap: 8,
 });
 
-const ImageBox = styled(Box)({
-  // width: "600px",
-  // borderRadius: "22px"
-  // width: "558px",
-  // height: "386px",
-  // border: "1px solid red",
-});
+const StyledCheckboxText = styled(Typography)(({ theme }) => ({
+
+}));
+
+const ImageBox = styled(Box)(({ theme }) => ({
+  overflow: "hidden",
+  [theme.breakpoints.down("xl")]: {
+    height: "340px",
+    width: "1000px",
+  },
+}));
+
+const StyledHeading = styled(Typography)(({ theme }) => ({
+  fontWeight: 700,
+  [theme.breakpoints.down("xl")]: {
+    fontSize: "2.5rem",
+  },
+})) as typeof Typography;
+
+const StyledSubHeading = styled(Typography)(({ theme }) => ({
+  fontWeight: 700,
+  fontSize: 18,
+
+  [theme.breakpoints.down("xl")]: {
+    fontWeight: 700,
+  },
+})) as typeof Typography;
 
 const Colocation = () => {
   return (
@@ -50,9 +79,9 @@ const Colocation = () => {
       </Box>
       <CentringBox>
         <Box>
-          <Typography sx={{ fontWeight: 700 }} variant="h3" component={"h1"}>
+          <StyledHeading variant="h3" component={"h1"}>
             Послуга колокейшн - розміщення серверів
-          </Typography>
+          </StyledHeading>
         </Box>
 
         <ImageBox>
@@ -64,41 +93,51 @@ const Colocation = () => {
           />
         </ImageBox>
         <Box>
-          <Typography sx={{ fontSize: 18 }}>
+          <StyledSubHeading variant="h3">
             Triangulum має власний дата-центр, для розміщення серверного та
             телекомунікаційного обладнання наших клієнтів
-          </Typography>
+          </StyledSubHeading>
         </Box>
-        <Box sx={{ display: "flex", gap: 10}}>
+        <Box sx={{ display: "flex", gap: 10 }}>
           <BenefitsBox>
             <Typography variant="h5">Переваги нашого сервісу</Typography>
             <CheckboxTextBox>
-              <CheckCircleIcon className={classes.checkbox}/>
-              <Typography>Безперебійне електропостачання</Typography>
+              <CheckCircleIcon className={classes.checkbox} />
+              <StyledCheckboxText>
+                Безперебійне електропостачання
+              </StyledCheckboxText>
             </CheckboxTextBox>
             <CheckboxTextBox>
-              <CheckCircleIcon className={classes.checkbox}/>
-              <Typography>Можливість доступу до обладнання 24/7</Typography>
+              <CheckCircleIcon className={classes.checkbox} />
+              <StyledCheckboxText>
+                Можливість доступу до обладнання 24/7
+              </StyledCheckboxText>
             </CheckboxTextBox>
             <CheckboxTextBox>
-              <CheckCircleIcon className={classes.checkbox}/>
-              <Typography>Стабільний температурний режим</Typography>
+              <CheckCircleIcon className={classes.checkbox} />
+              <StyledCheckboxText>
+                Стабільний температурний режим
+              </StyledCheckboxText>
             </CheckboxTextBox>
             <CheckboxTextBox>
-              <CheckCircleIcon className={classes.checkbox}/>
-              <Typography>Можливість виділення додаткової мережі IP-адрес</Typography>
+
+              <CheckCircleIcon className={classes.checkbox} />
+              <StyledCheckboxText>
+              Можливість виділення додаткової мережі IP-адрес
+              </StyledCheckboxText>
             </CheckboxTextBox>
             <CheckboxTextBox>
-              <CheckCircleIcon className={classes.checkbox}/>
-              <Typography>Цілодобова технічна підтримка</Typography>
+              <CheckCircleIcon className={classes.checkbox} />
+              <StyledCheckboxText>
+                Цілодобова технічна підтримка
+              </StyledCheckboxText>
             </CheckboxTextBox>
-            
           </BenefitsBox>
-          <Box sx={{width: "700px", float: "right"}}><ColocationTable /></Box>
+          <Box sx={{ width: "700px", float: "right" }}>
+            <ColocationTable />
+          </Box>
         </Box>
-        
       </CentringBox>
-      
     </>
   );
 };
