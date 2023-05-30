@@ -11,8 +11,9 @@ const CentringBox = styled(Box) (({ theme }) => ({
   flexDirection: "column",
   alignItems: "center",
   // justifyContent: " space-around",
-  margin: "30px 150px",
+  margin: "30px 150px 100px",
   gap: 25,
+  // paddingBottom: "50px",
   // background: "#D6E6F2"
   [theme.breakpoints.down("xl")]: {
     margin: "30px 50px",
@@ -73,9 +74,9 @@ const Colocation = () => {
   return (
     <>
       {/* <BackgroundImage /> */}
-      <div>
+      <Box className={classes.bg_div}>
         <img className={classes.bg} src={bg} alt="" />
-      </div>
+      </Box>
       <CentringBox>
         <Box>
           <StyledHeading variant="h3" component={"h1"}>
@@ -119,9 +120,10 @@ const Colocation = () => {
               </StyledCheckboxText>
             </CheckboxTextBox>
             <CheckboxTextBox>
+
               <CheckCircleIcon className={classes.checkbox} />
               <StyledCheckboxText>
-                Можливість виділення додаткової мережі ip адрес
+              Можливість виділення додаткової мережі IP-адрес
               </StyledCheckboxText>
             </CheckboxTextBox>
             <CheckboxTextBox>

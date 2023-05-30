@@ -5,6 +5,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { styled } from "@mui/material";
 
 function createData(
   name: number | string,
@@ -19,13 +20,25 @@ const rows = [
   createData("Потужність", "000", "000", "000"),
   createData("Місткість", "000", "000", "000"),
   createData("Розмір", "000", "000", "000"),
-  createData("Абонентська плата", "Індивідуально", "Індивідуально", "Індивідуально"),
+  createData(
+    "Абонентська плата",
+    "Індивідуально",
+    "Індивідуально",
+    "Індивідуально"
+  ),
 ];
+
+const StyledTable = styled(Table)({
+  minWidth: 650,
+  maxWidth: "100%",
+  background: "#99ddcc4a",
+  // background: "#99ddcc4a",
+});
 
 function ColocationTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650, maxWidth: "100%" }} aria-label="simple table">
+      <StyledTable aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell></TableCell>
@@ -49,7 +62,7 @@ function ColocationTable() {
             </TableRow>
           ))}
         </TableBody>
-      </Table>
+      </StyledTable>
     </TableContainer>
   );
 }

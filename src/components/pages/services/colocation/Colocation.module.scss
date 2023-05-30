@@ -18,6 +18,18 @@
   opacity: 0.4;
   top: 0;
   z-index: -1;
+  // background: "#1976d238"
+}
+.bg_div {
+  // position: absolute;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: -2;
+  // background: red
+  // background: #1976d238;
+  background: #D6E6F2;
 }
 
 .checkbox {
