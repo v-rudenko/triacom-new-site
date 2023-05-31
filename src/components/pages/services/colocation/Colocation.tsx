@@ -48,6 +48,7 @@ const StyledCheckboxText = styled(Typography)(({ theme }) => ({
 
 const ImageBox = styled(Box)(({ theme }) => ({
   overflow: "hidden",
+  borderRadius: "30px",
   [theme.breakpoints.down("xl")]: {
     height: "340px",
     width: "1000px",

@@ -11,25 +11,30 @@ import CloudOutlinedIcon from "@mui/icons-material/CloudOutlined";
 import FaxIcon from "@mui/icons-material/FaxOutlined";
 import WebOutlinedIcon from "@mui/icons-material/WebOutlined";
 
-
 const BoxWraper = styled(Box)(({ theme }) => ({
   margin: "50px 200px",
   textAlign: "center",
-  [theme.breakpoints.down("xl")]: {
-    margin: "50px 50px",
-  },
+  // [theme.breakpoints.down("xl")]: {
+  //   margin: "50px 200px",
+  // },
 }));
 
-const StyledBox = styled(Box)({
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
+const StyledBox = styled(Box)(({ theme }) => ({
+  // display: "flex",
+  // flexDirection: "row",
+  // alignItems: "center",
+  display: "grid",
+  gridTemplateColumns: "repeat(3, max(450px))",
+  // gridTemplateRows: "1fr 300px 300px",
   justifyContent: "space-evenly",
   flexWrap: "wrap",
   gap: 30,
   // padding: "50px 200px",
   // padding: "50px 15%",
-});
+  [theme.breakpoints.down("xl")]: {
+    gridTemplateColumns: "repeat(2, max(450px))",
+  },
+}));
 
 const SolutionsList = () => {
   const fontSize = "40px";
