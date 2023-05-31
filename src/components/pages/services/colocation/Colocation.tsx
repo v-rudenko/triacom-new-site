@@ -1,10 +1,10 @@
 import { Box, Typography, styled } from "@mui/material";
 import colocationBanner from "./images/servers.png";
 import classes from "./Colocation.module.scss";
-import bg from "./images/bg.jpg";
 
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ColocationTable from "./ColocationTable";
+import BackgroundImage from "../../../UI/background/BackgroundImage";
 
 const CentringBox = styled(Box) (({ theme }) => ({
   display: "flex",
@@ -75,9 +75,7 @@ const Colocation = () => {
   return (
     <>
       {/* <BackgroundImage /> */}
-      <Box className={classes.bg_div}>
-        <img className={classes.bg} src={bg} alt="" />
-      </Box>
+      <BackgroundImage variant="green" />
       <CentringBox>
         <Box>
           <StyledHeading variant="h3" component={"h1"}>
