@@ -29,6 +29,7 @@ const Slider = () => {
     <div className={classes.carusel_div}>
       <h1 className={classes.heading_text}>Нам довіряють</h1>
       <Swiper
+        id="our-clients-slider"
         draggable={false}
         navigation={true}
         modules={[Autoplay, Navigation]}

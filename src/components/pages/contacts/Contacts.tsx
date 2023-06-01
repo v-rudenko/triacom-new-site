@@ -24,7 +24,7 @@ const Contacts = () => {
         <ContactList />
         <Map></Map>
       </CentringBox>
-      <BackgroundImage />
+      <BackgroundImage variant="blue" />
     </>
   );
 };

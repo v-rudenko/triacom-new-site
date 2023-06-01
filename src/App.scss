@@ -18,3 +18,9 @@ html {
   height: 500px;
   width: 800px;
 }
+
+#our-clients-slider {
+  .swiper-button-prev, .swiper-button-next {
+    padding: 0 20px;
+  }
+}
