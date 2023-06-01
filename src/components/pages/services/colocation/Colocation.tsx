@@ -1,10 +1,13 @@
-import { Box, Typography, styled } from "@mui/material";
+import { useState } from "react";
+
+import { Box, Button, Typography, styled } from "@mui/material";
 import colocationBanner from "./images/servers.png";
 import classes from "./Colocation.module.scss";
 
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ColocationTable from "./ColocationTable";
 import BackgroundImage from "../../../UI/background/BackgroundImage";
+import ServiceContactForm from "../ServiceContactForm";
 
 const CentringBox = styled(Box) (({ theme }) => ({
   display: "flex",
@@ -72,10 +75,19 @@ const StyledSubHeading = styled(Typography)(({ theme }) => ({
 })) as typeof Typography;
 
 const Colocation = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const modalOpenHandler = () => setModalOpen(true);
+
+  const modalCloseHandler = () => setModalOpen(false);
   return (
     <>
       {/* <BackgroundImage /> */}
       <BackgroundImage variant="green" />
+      <ServiceContactForm
+          isOpen={modalOpen}
+          onModalClose={modalCloseHandler}
+        />
       <CentringBox>
         <Box>
           <StyledHeading variant="h3" component={"h1"}>
@@ -131,6 +143,7 @@ const Colocation = () => {
                 Цілодобова технічна підтримка
               </StyledCheckboxText>
             </CheckboxTextBox>
+            <Button onClick={modalOpenHandler} sx={{color: "green", borderColor: "green"}} variant="outlined">Замовити послугу</Button>
           </BenefitsBox>
           <Box sx={{ width: "700px", float: "right" }}>
             <ColocationTable />
