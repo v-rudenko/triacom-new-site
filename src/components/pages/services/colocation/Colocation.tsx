@@ -111,7 +111,7 @@ const Colocation = () => {
         </Box>
         <Box sx={{ display: "flex", gap: 10 }}>
           <BenefitsBox>
-            <Typography variant="h5">Переваги нашого сервісу</Typography>
+            <Typography variant="h5" component={"h3"}>Переваги нашого сервісу:</Typography>
             <CheckboxTextBox>
               <CheckCircleIcon className={classes.checkbox} />
               <StyledCheckboxText>

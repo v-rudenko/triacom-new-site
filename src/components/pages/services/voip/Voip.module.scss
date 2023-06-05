@@ -1,0 +1,21 @@
+.benefits_list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 30px;
+  svg {
+    margin-top: 4px;
+    color: green;
+  }
+
+  li {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    // align-items: center;
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
