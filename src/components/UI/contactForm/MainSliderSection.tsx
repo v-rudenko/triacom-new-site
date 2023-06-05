@@ -8,18 +8,6 @@ import ContactForm from "./ContactForm";
 
 // type Props = {}
 
-const FormContainer = styled(Box)({
-  display: "flex",
-  flexDirection: "column",
-  // background: "#1c92d2",
-  background: "linear-gradient(to bottom, #1c92d26b, #1c92d270)",
-  padding: "1rem 2rem 1.5rem",
-  borderRadius: "15px",
-  maxWidth: "400px",
-    // gap: 20,
-  gap: 15,
-});
-
 const FormWrapper = styled(Box)({
   display: "flex",
   flexDirection: "row",
