@@ -83,7 +83,7 @@ const Colocation = () => {
   return (
     <>
       {/* <BackgroundImage /> */}
-      <BackgroundImage variant="green" />
+      <BackgroundImage variant="green" inverted={true} />
       <ServiceContactForm
           isOpen={modalOpen}
           onModalClose={modalCloseHandler}
