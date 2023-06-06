@@ -107,7 +107,7 @@ const Voip = () => {
           </ul>
         </BenefitsTextBox>
         <BenefitsImageBox>
-          <img src={CallAnswerPhoto} width="700px" alt="phone-image" />
+          <img src={CallAnswerPhoto} className={classes.banner} width="700px" alt="phone-image" />
         </BenefitsImageBox>
       </CentringBox>
     </>
