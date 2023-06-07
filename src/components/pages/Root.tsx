@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import BackgroundImage from "../UI/background/BackgroundImage";
 import Navbar from "../UI/navigation/Navbar";
 import { ScrollRestoration } from "react-router-dom";
+import Footer from "../UI/footer/Footer";
 
 const RootLayout = () => {
   useEffect(() => {
@@ -25,6 +26,8 @@ const RootLayout = () => {
       {/* <BackgroundImage /> */}
       <ScrollRestoration />
       <Outlet />
+      <Footer />
+      
     </>
   );
 };
