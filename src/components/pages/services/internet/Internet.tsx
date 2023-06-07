@@ -95,7 +95,7 @@ const Internet = () => {
           <CheckboxTextBox>
             <img className={classes.checkbox} src={CheckboxSVG} alt="" />{" "}
             <CheckboxText sx={{ ml: 1 }}>
-              Гнучкі тарифи від 1Мбіт/c до 10Гбіт/с
+              Гнучкі тарифи від 1 Мбіт/c до 10 Гбіт/с
             </CheckboxText>
           </CheckboxTextBox>
           <CheckboxTextBox>
