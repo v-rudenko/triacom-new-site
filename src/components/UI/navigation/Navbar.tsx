@@ -105,7 +105,7 @@ const Navbar = () => {
               <Link className={classes.menu_link} to={`${URL}/internet`}>
                 <MenuItem onClick={servicesCloseHandler}>Інтернет</MenuItem>
               </Link>
-              <Link className={classes.menu_link} to={`${URL}/voip`}>
+              <Link className={classes.menu_link} to={`${URL}/voice`}>
                 <MenuItem onClick={servicesCloseHandler}>Телефонія</MenuItem>
               </Link>
               <Link className={classes.menu_link} to={`${URL}/colocation`}>

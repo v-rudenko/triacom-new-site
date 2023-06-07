@@ -22,6 +22,7 @@ import Colocation from "./components/pages/services/colocation/Colocation";
 import DataLinks from "./components/pages/services/data_links/DataLinks";
 import VirtualPbx from "./components/pages/services/virtual_pbx/VirtualPbx";
 import Hosting from "./components/pages/services/hosting/Hosting";
+import Voice from "./components/pages/services/voice/Voice";
 
 // const PATH = "/triacom-new-site"
 const PATH = "/";
@@ -41,7 +42,7 @@ const router = createHashRouter([
       { path: PATH + "/contacts", element: <Contacts /> },
       // ПОСЛУГИ
       { path: PATH + "/internet", element: <Internet /> },
-      { path: PATH + "/voip", element: <Voip /> },
+      { path: PATH + "/voice/*", element: <Voice /> },
       { path: PATH + "/colocation", element: <Colocation /> },
       { path: PATH + "/data-links", element: <DataLinks /> },
       { path: PATH + "/virtual-pbx", element: <VirtualPbx /> },

@@ -1,5 +1,3 @@
-import girlBanner from "./girl-banner-edited.jpg";
-
 import classes from "./Banner.module.scss";
 import MainSlider from "../main_slider/MainSlider";
 

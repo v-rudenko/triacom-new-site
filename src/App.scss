@@ -1,3 +1,7 @@
+html {
+  margin: 0 auto;
+}
+
 body {
   margin: 0 auto;
   width: 100vw;
@@ -6,8 +10,11 @@ body {
   // background-color: #F5FAFE;
   overflow-x: hidden;
 }
-html {
-  margin: 0 auto;
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 * {
@@ -24,3 +31,4 @@ html {
     padding: 0 20px;
   }
 }
+

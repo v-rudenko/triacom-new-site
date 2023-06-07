@@ -55,8 +55,8 @@ const SolutionsList = () => {
         <Solution
           title="Телефонія"
           color="#00bf00b5"
-          description="Якісна телефонія на базі SIP та PRI"
-          path="/voip"
+          description="Якісна телефонія на базі SIP та ISDN"
+          path="/voice"
         >
           <PhoneInTalkIcon sx={{ fontSize }} />
         </Solution>

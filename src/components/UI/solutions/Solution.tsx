@@ -40,7 +40,7 @@ const Solution = (props: Props) => {
         <IconBox>{props.children}</IconBox>
         <Typography variant="h6">{props.title}</Typography>
       </Box>
-      <Typography>{props.description}</Typography>
+      <Typography sx={{maxWidth: "300px"}}>{props.description}</Typography>
       <Link to={props.path}>
         <Button variant="outlined">Докладніше</Button>
       </Link>
