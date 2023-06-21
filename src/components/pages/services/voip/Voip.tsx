@@ -103,6 +103,12 @@ const Voip = () => {
                 часу та потреб.
               </Typography>
             </li>
+            <li>
+            <CheckCircleIcon fontSize={fontSize} />
+              <Typography>
+                Можливість налаштування телефонного обладнання абонента (IP-телефон, Софтфон, VOIP-шлюз).
+              </Typography>
+            </li>
             <Button onClick={modalOpenHandler} sx={{color: "green", borderColor: "green"}} size="large" variant="outlined">Замовити послугу</Button>
           </ul>
         </BenefitsTextBox>
