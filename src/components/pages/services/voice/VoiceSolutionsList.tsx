@@ -2,6 +2,9 @@
 
 import { Box, Button, Typography, styled } from "@mui/material";
 import VoiceSolution from "./VoiceSolution";
+import VoipImage from "./images/phone4.jpg"
+import ISDNImage from "./images/phone.jpg"
+import ServerImage from "./images/server.jpg"
 
 // type Props = {}
 
@@ -10,7 +13,7 @@ const WrapperBox = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   marginTop: 20,
-  gap: 20
+  gap: 20,
 });
 
 const SolutionsBox = styled(Box)({
@@ -29,16 +32,19 @@ const VoiceSolutionsList = () => {
           title="IP-Телефонія"
           description="Універсальне рішення для будь-якої компанії"
           path="/voice/voip"
+          image={VoipImage}
         />
         <VoiceSolution
           title="ISDN-Телефонія"
           description="Рішення для компаній, що мають власну АТС, та потребують великої кількості ліній"
           path="/voice/voip"
+          image={ISDNImage}
         />
         <VoiceSolution
           title="Віртуальна АТС"
           description="Я не придумав, що тут написати"
           path="/voice/virtual-pbx"
+          image={ServerImage}
         />
       </SolutionsBox>
       <Typography variant="h4">Не знаєте що обрати?</Typography>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import BackgroundImage from "../../../UI/background/BackgroundImage";
+import pbxDiagram from "./images/pbxDiagram.jpg";
 
 import { Box, Button, Typography, styled } from "@mui/material";
 
@@ -15,6 +16,7 @@ const CentringBox = styled(Box)({
   display: "flex",
   justifyContent: "space-evenly",
   margin: "70px 150px 70px",
+  gap: 50
 });
 
 const BenefitsTextBox = styled(Box)({
@@ -24,9 +26,10 @@ const BenefitsTextBox = styled(Box)({
 });
 
 const BenefitsImageBox = styled(Box)({
-  width: "700px",
+  // width: "700px",
   height: "600px",
-  border: "3px solid black",
+  // borderRadius: "20px",
+  // border: "3px solid black",
 });
 
 const StyledHeading = styled(Typography)(({ theme }) => ({
@@ -108,7 +111,8 @@ const VirtualPbx = () => {
           </ul>
         </BenefitsTextBox>
         <BenefitsImageBox>
-          <h1>Тут буде схема або картинка</h1>
+          {/* <h1>Тут буде схема або картинка</h1> */}
+          <img className={classes.schema} src={pbxDiagram} alt="" />
         </BenefitsImageBox>
       </CentringBox>
     </>

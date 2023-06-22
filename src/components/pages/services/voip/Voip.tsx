@@ -5,7 +5,8 @@ import BackgroundImage from "../../../UI/background/BackgroundImage";
 import { Box, Button, Typography, styled } from "@mui/material";
 
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import CallAnswerPhoto from "./images/phone4.jpg";
+// import CallAnswerPhoto from "./images/phone4.jpg";
+import VoipDiagram from "./images/voipDiagram.jpg";
 
 import classes from "./Voip.module.scss"
 import ServiceContactForm from "../ServiceContactForm";
@@ -14,7 +15,8 @@ import ServiceContactForm from "../ServiceContactForm";
 const CentringBox = styled(Box)({
   display: "flex",
   justifyContent: "space-evenly",
-  margin: "70px 150px 70px",
+  margin: "60px 60px 20px",
+  gap: 30
 });
 
 const BenefitsTextBox = styled(Box)({
@@ -24,8 +26,9 @@ const BenefitsTextBox = styled(Box)({
 });
 
 const BenefitsImageBox = styled(Box)({
-  width: "558px",
-  height: "386px",
+  // width: "558px",
+  marginTop: "50px",
+  height: "550px",
   // border: "1px solid red",
 });
 
@@ -113,7 +116,8 @@ const Voip = () => {
           </ul>
         </BenefitsTextBox>
         <BenefitsImageBox>
-          <img src={CallAnswerPhoto} className={classes.banner} width="700px" alt="phone-image" />
+          <img src={VoipDiagram} className={classes.banner} alt="phone-image" />
+          {/* <img src={CallAnswerPhoto} className={classes.banner} width="700px" alt="phone-image" /> */}
         </BenefitsImageBox>
       </CentringBox>
     </>

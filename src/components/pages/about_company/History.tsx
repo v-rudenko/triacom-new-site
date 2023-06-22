@@ -2,10 +2,36 @@ import { Box, Typography, styled } from "@mui/material";
 
 // type Props = {}
 
-import BackgroundImage from "../../UI/background/BackgroundImage";
+import fiberImage from "./images/fiber.jpg";
+
+const FiberBox = styled(Box)({
+  // backgroundImage: `url(${fiberImage})`,
+  // width: "100%",
+  // backgroundRepeat: "no-repeat",
+  // backgroundSize: "cover",
+  // height: 500,
+  // position: "relative"
+});
+
+const OuterBox = styled(Box) ({
+  // position: "absolute",
+  overflow: "hidden",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+})
+const InnerBox = styled(Box) ({
+  backgroundImage: `url(${fiberImage})`,
+  width: "100%",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  height: 350,
+  // position: "relative"
+})
 
 const HistoryBox = styled(Box)({
-  margin: "50px 150px",
+  margin: "10px 150px",
   padding: "30px 20px",
   display: "flex",
   flexDirection: "column",
@@ -31,6 +57,11 @@ const HeadingText = styled(Typography)({
 const History = () => {
   return (
     <div>
+      <FiberBox>{/* <img src={fiberImage} alt="" /> */}</FiberBox>
+      <OuterBox>
+        <InnerBox></InnerBox>
+      </OuterBox>
+
       {/* <BackgroundImage /> */}
       <HistoryBox>
         <PlainText>
@@ -81,10 +112,11 @@ const History = () => {
           <b>
             Товариство з обмеженою відповідальністю “Глобальні Комунікації” (код
             ЄДРПОУ 38049812)
-          </b> внесено до Реєстру постачальників електронних
-          комунікаційних мереж та послуг Національної комісії, що здійснює
-          державне регулювання у сферах електронних комунікацій, радіочастотного
-          спектра та надання послуг поштового зв’язку за № 2215.
+          </b>{" "}
+          внесено до Реєстру постачальників електронних комунікаційних мереж та
+          послуг Національної комісії, що здійснює державне регулювання у сферах
+          електронних комунікацій, радіочастотного спектра та надання послуг
+          поштового зв’язку за № 2215.
         </PlainText>
       </HistoryBox>
     </div>
