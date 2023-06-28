@@ -1,9 +1,16 @@
 import { useState } from "react";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 import {
   Box,
   Button,
+  Checkbox,
+  FormControl,
   IconButton,
+  InputLabel,
+  ListItemText,
+  MenuItem,
   Modal,
+  OutlinedInput,
   TextField,
   Typography,
   styled,
@@ -37,7 +44,38 @@ const FormContainer = styled(Box)({
   gap: 25,
 });
 
+const servicesList = [
+  "Інтернет",
+  "Канали зв'язку",
+  "Телефонія",
+  "Віртуальна АТС",
+  "Колокейшн",
+];
+
 const ServiceContactForm = (props: Props) => {
+  const [services, setServices] = useState<string[]>([]);
+
+  const ITEM_HEIGHT = 80;
+  const ITEM_PADDING_TOP = 8;
+  const MenuProps = {
+    PaperProps: {
+      style: {
+        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+        width: 50,
+      },
+    },
+  };
+
+  const handleChange = (event: SelectChangeEvent<typeof services>) => {
+    const {
+      target: { value },
+    } = event;
+    setServices(
+      // On autofill we get a stringified value.
+      typeof value === "string" ? value.split(",") : value
+    );
+  };
+
   return (
     <Modal open={props.isOpen} onClose={props.onModalClose}>
       <form>
@@ -98,6 +136,26 @@ const ServiceContactForm = (props: Props) => {
               size="small"
               required={true}
             />
+            <FormControl sx={{ width: "100%" }}>
+              <InputLabel id="demo-multiple-checkbox-label">Послуги</InputLabel>
+              <Select
+                labelId="demo-multiple-checkbox-label"
+                id="demo-multiple-checkbox"
+                multiple
+                value={services}
+                onChange={handleChange}
+                input={<OutlinedInput label="Послуги" />}
+                renderValue={(selected) => selected.join(", ")}
+                MenuProps={MenuProps}
+              >
+                {servicesList.map((service) => (
+                  <MenuItem key={service} value={service}>
+                    <Checkbox checked={services.indexOf(service) > -1} />
+                    <ListItemText primary={service} />
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
             <TextField
               id="filled-name-comment"
               label="Коментар"

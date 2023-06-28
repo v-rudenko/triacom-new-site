@@ -31,7 +31,7 @@ const Solution = (props: Props) => {
     // padding: "50px 100px 100px",
     borderRadius: "15px",
     // width: "15%",
-    height: "300px",
+    height: "350px",
     flexBasis: "calc(33.333333% - 30px)",
   });
   return (

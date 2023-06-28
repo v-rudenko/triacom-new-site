@@ -29,7 +29,7 @@ const SolutionBox = styled(Box)({
 const ImageBox = styled(Box) ({
   width: "300px",
   height: "200px",
-  border: "1px solid black"
+  // border: "1px solid black"
 })
 
 const DescriptionBox = styled(Box) ({
@@ -40,7 +40,7 @@ const VoiceSolution = (props: Props) => {
   return (
     <SolutionBox>
       <Typography variant="h6">{props.title}</Typography>
-      <ImageBox><img width="300px" height="200px" src={props.image} alt="" /></ImageBox>
+      <ImageBox><img height="200px" src={props.image} alt="" /></ImageBox>
       <DescriptionBox><Typography>{props.description}</Typography></DescriptionBox>
       <Link to={props.path}><Button variant="contained">Докладніше</Button></Link>
     </SolutionBox>

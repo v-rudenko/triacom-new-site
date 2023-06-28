@@ -2,9 +2,9 @@
 
 import { Box, Button, Typography, styled } from "@mui/material";
 import VoiceSolution from "./VoiceSolution";
-import VoipImage from "./images/phone4.jpg"
-import ISDNImage from "./images/phone.jpg"
-import ServerImage from "./images/server.jpg"
+import VoipImage from "./images/sip.jpg"
+import ISDNImage from "./images/isdn.jpg"
+import ServerImage from "./images/virtulalPbx.jpg"
 
 // type Props = {}
 

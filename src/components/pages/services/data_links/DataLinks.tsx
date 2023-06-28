@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import BackgroundImage from "../../../UI/background/BackgroundImage";
-// import pbxDiagram from "./images/pbxDiagram.jpg";
+import dataLinkDiagram from "./images/dataLink.jpg";
 
 import { Box, Button, Typography, styled } from "@mui/material";
 
@@ -26,8 +26,9 @@ const BenefitsTextBox = styled(Box)({
 });
 
 const BenefitsImageBox = styled(Box)({
-  // width: "700px",
-  height: "600px",
+  // marginTop: "10px",
+  width: "700px",
+  height: "700px",
   // borderRadius: "20px",
   // border: "3px solid black",
 });
@@ -106,7 +107,7 @@ const DataLinks = () => {
         </BenefitsTextBox>
         <BenefitsImageBox>
           {/* <h1>Тут буде схема або картинка</h1> */}
-          {/* <img className={classes.schema} src={pbxDiagram} alt="" /> */}
+          <img className={classes.schema} src={dataLinkDiagram} alt="" />
         </BenefitsImageBox>
       </CentringBox>
     </>

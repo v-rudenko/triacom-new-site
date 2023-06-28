@@ -24,11 +24,13 @@ const StyledBox = styled(Box)(({ theme }) => ({
   // flexDirection: "row",
   // alignItems: "center",
   display: "grid",
-  gridTemplateColumns: "repeat(3, max(450px))",
+  marginTop: "40px",
+  gridTemplateColumns: "repeat(4, max(400px))",
   // gridTemplateRows: "1fr 300px 300px",
-  justifyContent: "space-evenly",
+  justifyContent: "center",
+  // justifyContent: "space-evenly",
   flexWrap: "wrap",
-  gap: 30,
+  gap: 50,
   // padding: "50px 200px",
   // padding: "50px 15%",
   [theme.breakpoints.down("xl")]: {
@@ -77,7 +79,9 @@ const SolutionsList = () => {
         >
           <AccountTreeIcon sx={{ fontSize }}></AccountTreeIcon>
         </Solution>
-        <Solution
+
+
+        {/* <Solution
           title="Віртуальна АТС"
           description="Комплексне рішення питання телефонії"
           color="#00bf00b5"
@@ -96,15 +100,17 @@ const SolutionsList = () => {
               }}
             ></FaxIcon>
           </Box>
-        </Solution>
-        <Solution
+        </Solution> */}
+
+        
+        {/* <Solution
           title="Хостинг"
           description="Доступний та зручний хостинг сайтів"
           color="rgb(255 0 0 / 64%)"
           path="/hosting"
         >
           <WebOutlinedIcon sx={{ fontSize }} />
-        </Solution>
+        </Solution> */}
       </StyledBox>
     </BoxWraper>
   );
