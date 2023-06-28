@@ -73,7 +73,7 @@ const VirtualPbx = () => {
             Віртуальна АТС
           </StyledHeading>
           <StyledSubHeading>
-            Тут буде текст з описом.
+          Віртуальна АТС працює на основі хмарної інфраструктури, що забезпечить стабільну та надійну роботу вашої телефонії.
           </StyledSubHeading>
           <Typography variant="h6">Переваги нашого сервісу:</Typography>
           <ul className={classes.benefits_list}>
@@ -86,7 +86,7 @@ const VirtualPbx = () => {
             <li>
               <CheckCircleIcon fontSize={fontSize} />
               <Typography>
-                Налаштування внутрішніх телефонних номерів
+                Створення внутрішніх телефонних номерів
               </Typography>
             </li>
             <li>
