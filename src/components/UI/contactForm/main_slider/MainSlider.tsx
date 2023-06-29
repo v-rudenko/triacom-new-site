@@ -11,7 +11,9 @@ import girlBanner from "../banner/girl-banner-edited.jpg";
 
 import classes from "./MainSlider.module.scss";
 
-import SupportImage from "./images/support.jfif";
+import SupportImage from "./images/support.jpg";
+
+import SalesImage from "./images/sales.jpg";
 
 // type Props = {}
 
@@ -54,7 +56,8 @@ const MainSlider = () => {
           </div>
         </div>
       </SwiperSlide>
-      <SwiperSlide><img src={SupportImage} alt="" /></SwiperSlide>
+      <SwiperSlide><img src={SalesImage} width={"700px"} alt="" /></SwiperSlide>
+      <SwiperSlide><img src={SupportImage} width={"700px"} alt="" /></SwiperSlide>
       {/* <SwiperSlide>Slide 3</SwiperSlide>
       <SwiperSlide>Slide 4</SwiperSlide> */}
     </Swiper>

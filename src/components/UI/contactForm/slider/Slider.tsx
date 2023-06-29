@@ -7,7 +7,7 @@ import classes from "./Slider.module.scss";
 import { Autoplay, Navigation } from "swiper";
 
 import BoryspilLogo from "./icons/Boryspil_logo.svg";
-import ZhulianyLogo from "./icons/Zhuliany_Logo.gif";
+import ZhulianyLogo from "./icons/Zhuliany_Logo.jpg";
 import DreamLogo from "./icons/DreamLogo.png";
 import VidiLogo from "./icons/vidi_logo.svg";
 import HelenLogo from "./icons/Helen_Marlen_Logo.png";
@@ -59,7 +59,7 @@ const Slider = () => {
           <img draggable={false} width={250} src={NMULogo} />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
-          <img draggable={false} height={100} src={ZhulianyLogo} />
+          <img draggable={false} height={80} src={ZhulianyLogo} />
         </SwiperSlide>
         <SwiperSlide className={classes.slide}>
           <img draggable={false} src={DreamLogo} height={100} alt="" />

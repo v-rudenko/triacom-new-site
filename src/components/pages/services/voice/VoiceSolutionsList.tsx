@@ -37,7 +37,7 @@ const VoiceSolutionsList = () => {
         <VoiceSolution
           title="ISDN-Телефонія"
           description="Рішення для компаній, що мають власну АТС, та потребують великої кількості ліній"
-          path="/voice/voip"
+          path="/voice/isdn"
           image={ISDNImage}
         />
         <VoiceSolution

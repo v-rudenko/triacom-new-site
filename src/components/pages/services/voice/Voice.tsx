@@ -4,6 +4,7 @@ import Voip from "../voip/Voip";
 import VoiceSolutions from "./VoiceSolutionsList";
 import BackgroundImage from "../../../UI/background/BackgroundImage";
 import VirtualPbx from "../virtual_pbx/VirtualPbx";
+import Isdn from "../isdn/Isdn";
 
 // type Props = {}
 
@@ -14,6 +15,7 @@ const Voice = () => {
       <Routes>
         <Route path="/" element={<VoiceSolutions />}></Route>
         <Route path="/voip" element={<Voip />}></Route>
+        <Route path="/isdn" element={<Isdn />}></Route>
         <Route path="/virtual-pbx" element={<VirtualPbx />}></Route>
       </Routes>
     </>

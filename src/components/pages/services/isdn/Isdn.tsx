@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import BackgroundImage from "../../../UI/background/BackgroundImage";
-import pbxDiagram from "./images/pbxDiagram2.jpg";
+import Diagram from "./images/isdn.jpg";
 
 import { Box, Button, Typography, styled } from "@mui/material";
 
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 // import CallAnswerPhoto from "./images/phone4.jpg";
 
-import classes from "./VirtualPbx.module.scss";
+import classes from "./Isdn.module.scss";
 import ServiceContactForm from "../ServiceContactForm";
 
 
@@ -54,7 +54,7 @@ const CheckboxTextBox = styled(Box)({
 });
 
 
-const VirtualPbx = () => {
+const Isdn = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const modalOpenHandler = () => setModalOpen(true);
   const modalCloseHandler = () => setModalOpen(false);
@@ -70,41 +70,29 @@ const VirtualPbx = () => {
       <CentringBox>
         <BenefitsTextBox>
           <StyledHeading variant="h3" component={"h1"}>
-            Віртуальна АТС
+            ISDN-Телефонія
           </StyledHeading>
           <StyledSubHeading>
-          Віртуальна АТС працює на основі хмарної інфраструктури, що забезпечить стабільну та надійну роботу вашої телефонії.
+         Найкраще рішення для компаній, які вже мають існуючу телефонну систему з власною АТС
           </StyledSubHeading>
           <Typography variant="h6">Переваги нашого сервісу:</Typography>
           <ul className={classes.benefits_list}>
             <li>
               <CheckCircleIcon fontSize={fontSize} />
               <Typography>
-                Підключення додаткових безномерних ліній
+                З'єднання з Інтернетом необов'язкове
               </Typography>
             </li>
             <li>
               <CheckCircleIcon fontSize={fontSize} />
               <Typography>
-                Створення внутрішніх телефонних номерів
+                Висока якість звуку з використанням виділених ліній
               </Typography>
             </li>
             <li>
               <CheckCircleIcon fontSize={fontSize} />
               <Typography>
-                Можливість трансферу та перехоплення дзвінків
-              </Typography>
-            </li>
-            <li>
-            <CheckCircleIcon fontSize={fontSize} />
-              <Typography>
-                Реалізація черги дзвінків, або режиму очікування
-              </Typography>
-            </li>
-            <li>
-            <CheckCircleIcon fontSize={fontSize} />
-              <Typography>
-                Ведення запису дзвінків, переадресації та "чорного списку"
+                Можливість використання аналогових телефонних апаратів без додаткового устаткування
               </Typography>
             </li>
             <Button onClick={modalOpenHandler} sx={{color: "green", borderColor: "green"}} size="large" variant="outlined">Замовити послугу</Button>
@@ -112,11 +100,11 @@ const VirtualPbx = () => {
         </BenefitsTextBox>
         <BenefitsImageBox>
           {/* <h1>Тут буде схема або картинка</h1> */}
-          <img className={classes.schema} src={pbxDiagram} alt="" />
+          <img className={classes.schema} src={Diagram} alt="" />
         </BenefitsImageBox>
       </CentringBox>
     </>
   );
 };
 
-export default VirtualPbx;
+export default Isdn;
