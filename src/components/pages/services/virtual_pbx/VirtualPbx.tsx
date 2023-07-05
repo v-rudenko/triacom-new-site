@@ -59,6 +59,8 @@ const VirtualPbx = () => {
   const modalOpenHandler = () => setModalOpen(true);
   const modalCloseHandler = () => setModalOpen(false);
 
+  const serviceTitle = "Віртуальна АТС";
+
   const fontSize = "large";
   return (
     <>
@@ -66,6 +68,7 @@ const VirtualPbx = () => {
       <ServiceContactForm
           isOpen={modalOpen}
           onModalClose={modalCloseHandler}
+          service={serviceTitle}
         />
       <CentringBox>
         <BenefitsTextBox>

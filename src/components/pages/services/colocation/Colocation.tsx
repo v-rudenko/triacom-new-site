@@ -80,6 +80,8 @@ const Colocation = () => {
   const modalOpenHandler = () => setModalOpen(true);
 
   const modalCloseHandler = () => setModalOpen(false);
+
+  const serviceTitle = "Колокейшн";
   return (
     <>
       {/* <BackgroundImage /> */}
@@ -87,6 +89,7 @@ const Colocation = () => {
       <ServiceContactForm
           isOpen={modalOpen}
           onModalClose={modalCloseHandler}
+          service={serviceTitle}
         />
       <CentringBox>
         <Box>

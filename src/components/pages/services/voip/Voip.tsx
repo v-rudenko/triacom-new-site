@@ -59,6 +59,8 @@ const Voip = () => {
   const modalOpenHandler = () => setModalOpen(true);
   const modalCloseHandler = () => setModalOpen(false);
 
+  const serviceTitle = "Телефонія";
+
   const fontSize = "large";
   return (
     <>
@@ -66,6 +68,7 @@ const Voip = () => {
       <ServiceContactForm
           isOpen={modalOpen}
           onModalClose={modalCloseHandler}
+          service={serviceTitle}
         />
       <CentringBox>
         <BenefitsTextBox>

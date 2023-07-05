@@ -73,8 +73,9 @@ const Internet = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const modalOpenHandler = () => setModalOpen(true);
-
   const modalCloseHandler = () => setModalOpen(false);
+
+  const serviceTitle = "Інтернет";
 
   return (
     <>
@@ -83,6 +84,7 @@ const Internet = () => {
         <ServiceContactForm
           isOpen={modalOpen}
           onModalClose={modalCloseHandler}
+          service={serviceTitle}
         />
         <InternetTextBox>
           <Box>

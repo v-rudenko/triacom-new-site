@@ -60,6 +60,8 @@ const DataLinks = () => {
   const modalOpenHandler = () => setModalOpen(true);
   const modalCloseHandler = () => setModalOpen(false);
 
+  const serviceTitle = "Канали зв'язку";
+
   const fontSize = "large";
   return (
     <>
@@ -67,6 +69,7 @@ const DataLinks = () => {
       <ServiceContactForm
           isOpen={modalOpen}
           onModalClose={modalCloseHandler}
+          service={serviceTitle}
         />
       <CentringBox>
         <BenefitsTextBox>
