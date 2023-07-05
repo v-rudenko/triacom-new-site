@@ -48,6 +48,12 @@ const NavButtonsBox = styled(Box)(({ theme }) => ({
   },
 }));
 
+const PhoneNumberBox = styled(Box) ({
+  padding: "20px",
+  borderRadius: "20px",
+  border: "4px solid #1c92d270",
+});
+
 const Navbar = () => {
   const [services, setServices] = useState<null | HTMLElement>(null);
   const servicesOpen = Boolean(services);
@@ -167,7 +173,7 @@ const Navbar = () => {
             </Link>
           </NavButtonsBox>
         </Box>
-        <Box sx={{ display: { xs: "none", lg: "flex" }, flexDirection: "row" }}>
+        <PhoneNumberBox sx={{ display: { xs: "none", lg: "flex" }, flexDirection: "row"  }}>
           {/* <StyledText>Технічна підтримка: &nbsp;</StyledText>
           <StyledText sx={{fontWeight: 700, color: "#08212b"}}>044-591-0-591 &nbsp;</StyledText>
           <StyledText>Замовити послугу: &nbsp;</StyledText>
@@ -178,7 +184,7 @@ const Navbar = () => {
           {/* <PhoneNumber description="Технічна підтримка">
             (044) 591-0-591
           </PhoneNumber> */}
-        </Box>
+        </PhoneNumberBox>
       </StyledToolbar>
     </AppBar>
   );

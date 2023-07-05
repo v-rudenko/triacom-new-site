@@ -1,4 +1,5 @@
 import { Link, styled, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 
 type Props = { description: string; children: string };
 
@@ -13,15 +14,15 @@ const PhoneNumber = (props: Props) => {
 
   return (
     <>
-      <StyledText sx={{ fontWeight: 500 }}>
-        {props.description}: &nbsp;
-      </StyledText>
-      <StyledText sx={{ fontWeight: 700, color: "#08212b" }}>
-        <Link underline="none" href={`tel:${props.children}`}>
-          {props.children}&nbsp;
-        </Link>{" "}
-        &nbsp;
-      </StyledText>
+        <StyledText sx={{ fontWeight: 500 }}>
+          {props.description}: &nbsp;
+        </StyledText>
+        <StyledText sx={{ fontWeight: 700, color: "#08212b" }}>
+          <Link underline="none" href={`tel:${props.children}`}>
+            {props.children}&nbsp;
+          </Link>{" "}
+          &nbsp;
+        </StyledText>
     </>
   );
 };
